@@ -1,0 +1,16 @@
+//
+// Prefix header for all source files of the 'WAYNE_IOS_SDK' target in the 'WAYNE_IOS_SDK' project
+//
+
+#import <Availability.h>
+
+#ifndef __IPHONE_4_0
+#warning "This project uses features only available in iOS SDK 4.0 and later."
+#endif
+
+#ifdef __OBJC__
+    #import <UIKit/UIKit.h>
+    #import <Foundation/Foundation.h>
+#endif
+#define UmengAppKey @"5254d71b56240bae3b40d91c"
+#define AppId_Weixin @"wx38a0c9693a832002"

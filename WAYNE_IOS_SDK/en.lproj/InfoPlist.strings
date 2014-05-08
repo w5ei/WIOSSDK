@@ -1,0 +1,3 @@
+/* Localized versions of Info.plist keys */
+CFBundleName="WIOSDK";
+CFBundleDisplayName="WIOSDK";
