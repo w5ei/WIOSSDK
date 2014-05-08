@@ -11,6 +11,7 @@
 #import "LifeManagerViewController.h"
 #import "NotificationViewController.h"
 #import "NumberView.h"
+#import "文字处理/StringUtil.h"
 
 @interface MenuViewController (){
     NSArray* _menuItemNames;
@@ -20,6 +21,12 @@
 @implementation MenuViewController
 
 -(void)test{
+    NSString *hanzi = @"我的天空多么的清晰";
+    NSLog(@"%@",[StringUtil convertHanziToPinyin:hanzi]);
+    NSLog(@"%@",[StringUtil convertHanziToPinyinInitials:hanzi]);
+    NSString *py,*pyi;
+    [StringUtil convertHanzi:hanzi toPinyin:&py andPinyinInitials:&pyi];
+    NSLog(@"%@  %@",py, pyi);
 }
 
 #pragma mark- TableView DataSource
@@ -49,8 +56,8 @@
     [tableView deselectRowAtIndexPath:indexPath animated:YES];
     switch (indexPath.row) {
         case 0:{
-            FacebookViewController* vc = [[FacebookViewController alloc]init];
-            [self.navigationController pushViewController:vc animated:YES];
+//            FacebookViewController* vc = [[FacebookViewController alloc]init];
+//            [self.navigationController pushViewController:vc animated:YES];
         }break;
         case 1:{
             LifeManagerViewController* vc = [[LifeManagerViewController alloc]init];

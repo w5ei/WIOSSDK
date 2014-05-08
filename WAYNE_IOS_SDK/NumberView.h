@@ -11,6 +11,6 @@
 @interface NumberView : UIView
 @property(nonatomic,readonly)UILabel* numberLabel;
 //-----
--(void)setNumber:(NSInteger)num;
+-(void)setNumber:(int)num;
 -(void)setBackgroundImage:(UIImage*)img marginTop:(CGFloat)top marginLeft:(CGFloat)left;
 @end

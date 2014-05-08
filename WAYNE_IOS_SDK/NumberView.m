@@ -39,7 +39,7 @@
         [self addSubview:_numberLabel];
     }
 }
--(void)setNumber:(NSInteger)num{
+-(void)setNumber:(int)num{
     if (_numberLabel==nil) {
         [self setupView];
     }

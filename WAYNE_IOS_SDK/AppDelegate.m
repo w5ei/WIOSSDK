@@ -10,7 +10,7 @@
 #import "MenuViewController.h"
 #import "MobClick.h"
 #import "UMSocial.h"
-#import <FacebookSDK/FacebookSDK.h>
+//#import <FacebookSDK/FacebookSDK.h>
 @implementation AppDelegate
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions
@@ -67,23 +67,23 @@
 - (void)applicationDidBecomeActive:(UIApplication *)application
 {
     [UMSocialSnsService  applicationDidBecomeActive];
-    [FBAppEvents activateApp];
-    [FBAppCall handleDidBecomeActive];
+//    [FBAppEvents activateApp];
+//    [FBAppCall handleDidBecomeActive];
 }
 
 - (void)applicationWillTerminate:(UIApplication *)application
 {
     [[NSNotificationCenter defaultCenter]removeObserver:self name:UMOnlineConfigDidFinishedNotification object:nil];
     
-    [FBSession.activeSession close];
+//    [FBSession.activeSession close];
 }
 - (BOOL)application:(UIApplication *)application
             openURL:(NSURL *)url
   sourceApplication:(NSString *)sourceApplication
          annotation:(id)annotation {
     [UMSocialSnsService handleOpenURL:url wxApiDelegate:nil];
-    [FBAppCall handleOpenURL:url
-                  sourceApplication:sourceApplication fallbackHandler:nil];
+//    [FBAppCall handleOpenURL:url
+//                  sourceApplication:sourceApplication fallbackHandler:nil];
     
     return YES;
 }

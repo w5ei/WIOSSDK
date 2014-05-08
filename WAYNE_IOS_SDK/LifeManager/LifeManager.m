@@ -8,7 +8,7 @@
 
 #import "LifeManager.h"
 static NSUInteger const MAX_LIVES_COUNT = 5;
-static NSUInteger const DEFAULT_LIVES_COUNT = 5;
+//static NSUInteger const DEFAULT_LIVES_COUNT = 5;
 static NSUInteger const LIFE_PLUS_INTERVAL_SECONDS = 60*30;
 @implementation LifeManager{
     NSTimer* _timer;//增加生命计时器

@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		2490491A191B778100CDC909 /* StringUtil.m in Sources */ = {isa = PBXBuildFile; fileRef = 24904919191B778100CDC909 /* StringUtil.m */; };
 		7D48400317C5BD44009AC184 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7D48400217C5BD44009AC184 /* UIKit.framework */; };
 		7D48400517C5BD44009AC184 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7D48400417C5BD44009AC184 /* Foundation.framework */; };
 		7D48400717C5BD44009AC184 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7D48400617C5BD44009AC184 /* CoreGraphics.framework */; };
@@ -92,6 +93,8 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		24904918191B778100CDC909 /* StringUtil.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = StringUtil.h; sourceTree = "<group>"; };
+		24904919191B778100CDC909 /* StringUtil.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = StringUtil.m; sourceTree = "<group>"; };
 		7D483FFF17C5BD44009AC184 /* WAYNE_IOS_SDK.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = WAYNE_IOS_SDK.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		7D48400217C5BD44009AC184 /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
 		7D48400417C5BD44009AC184 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
@@ -255,6 +258,15 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		24904917191B76E100CDC909 /* 文字处理 */ = {
+			isa = PBXGroup;
+			children = (
+				24904918191B778100CDC909 /* StringUtil.h */,
+				24904919191B778100CDC909 /* StringUtil.m */,
+			);
+			path = "文字处理";
+			sourceTree = "<group>";
+		};
 		7D483FF617C5BD44009AC184 = {
 			isa = PBXGroup;
 			children = (
@@ -501,6 +513,7 @@
 		7DB87ED917DEFDD0000EEBA2 /* Utils */ = {
 			isa = PBXGroup;
 			children = (
+				24904917191B76E100CDC909 /* 文字处理 */,
 				7DB87F0417DF07B1000EEBA2 /* Views */,
 				7DB87EF617DF0744000EEBA2 /* Data File */,
 				7DB87EEF17DF0691000EEBA2 /* Sound */,
@@ -632,11 +645,6 @@
 			attributes = {
 				LastUpgradeCheck = 0460;
 				ORGANIZATIONNAME = "green wayne";
-				TargetAttributes = {
-					7D483FFE17C5BD44009AC184 = {
-						DevelopmentTeam = FM9VMF8W49;
-					};
-				};
 			};
 			buildConfigurationList = 7D483FFA17C5BD44009AC184 /* Build configuration list for PBXProject "WAYNE_IOS_SDK" */;
 			compatibilityVersion = "Xcode 3.2";
@@ -707,6 +715,7 @@
 				7D4AE8661818C87D00B19465 /* TimeUtil.m in Sources */,
 				7DEFA579180EA28A003E0CFF /* InAppPurchaseViewController.m in Sources */,
 				7DA1F9FF1805710E007459B1 /* MenuViewController.m in Sources */,
+				2490491A191B778100CDC909 /* StringUtil.m in Sources */,
 				7D48401317C5BD45009AC184 /* AppDelegate.m in Sources */,
 				7DA24927181E0E7700E9C7B5 /* NotificationManager.m in Sources */,
 				7DA1F9FA18057046007459B1 /* NotificationViewController.m in Sources */,
@@ -800,7 +809,7 @@
 				GCC_WARN_ABOUT_RETURN_TYPE = YES;
 				GCC_WARN_UNINITIALIZED_AUTOS = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 6.1;
+				IPHONEOS_DEPLOYMENT_TARGET = 7.1;
 				ONLY_ACTIVE_ARCH = YES;
 				SDKROOT = iphoneos;
 				TARGETED_DEVICE_FAMILY = "1,2";
@@ -825,7 +834,7 @@
 				GCC_WARN_ABOUT_RETURN_TYPE = YES;
 				GCC_WARN_UNINITIALIZED_AUTOS = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 6.1;
+				IPHONEOS_DEPLOYMENT_TARGET = 7.1;
 				OTHER_CFLAGS = "-DNS_BLOCK_ASSERTIONS=1";
 				SDKROOT = iphoneos;
 				TARGETED_DEVICE_FAMILY = "1,2";
@@ -836,7 +845,7 @@
 		7D48403717C5BD45009AC184 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
-				CODE_SIGN_IDENTITY = "iPhone Developer";
+				CODE_SIGN_IDENTITY = "";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
@@ -863,7 +872,7 @@
 		7D48403817C5BD45009AC184 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
-				CODE_SIGN_IDENTITY = "iPhone Developer";
+				CODE_SIGN_IDENTITY = "";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
