@@ -5,16 +5,18 @@
 //  Created by green wayne on 13-10-23.
 //  Copyright (c) 2013年 cubic. All rights reserved.
 //
+@class LifeManager;
 @protocol LifeManagerDelegate <NSObject>
 @optional
--(void)lifeManagerTimerIsWorking:(int)lifePlusLeftTimeSeconds;
--(void)lifeManagerLifeChanged:(int)lifeCount;
+-(void)lifeManager:(LifeManager*)lifeManger timerIsWorking:(int)lifePlusLeftTimeSeconds;
+-(void)lifeManager:(LifeManager*)lifeManger lifeChanged:(int)lifeCount;
 @end
 #import <Foundation/Foundation.h>
 @interface LifeManager : NSObject
 @property(nonatomic,assign)id<LifeManagerDelegate>delegate;
 @property(nonatomic,readonly)int lifeCount;
 @property(nonatomic,readonly)int lifePlusLeftTimeSeconds;//增加一条生命剩余秒数
+@property(nonatomic,readonly)int totalLeftTimeSeconds;
 //-----
 //+(id)sharedInstance;
 +(id)lifeManager;

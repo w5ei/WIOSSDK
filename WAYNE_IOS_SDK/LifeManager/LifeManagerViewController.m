@@ -18,11 +18,12 @@
 -(void)dealloc{
     [_lm stop];
 }
--(void)lifeManagerTimerIsWorking:(int)lifePlusLeftTimeSeconds{
-    NSLog(@">>>>%@",_lm);
+-(void)lifeManager:(LifeManager*)lifeManger timerIsWorking:(int)lifePlusLeftTimeSeconds{
+    _label.text = [NSString stringWithFormat:@"%02d:%02d",lifePlusLeftTimeSeconds/60%60,lifePlusLeftTimeSeconds%60];
+    _label3.text = [NSString stringWithFormat:@"%02d:%02d:%02d",lifeManger.totalLeftTimeSeconds/60/60%60,lifeManger.totalLeftTimeSeconds/60%60,lifeManger.lifePlusLeftTimeSeconds%60];
 }
--(void)lifeManagerLifeChanged:(int)lifeCount{
-    NSLog(@"^^^^^^^^^^^^^^^^^^^^^NEW COUNT:%d",lifeCount);
+-(void)lifeManager:(LifeManager*)lifeManger lifeChanged:(int)lifeCount{
+    _label2.text = [NSString stringWithFormat:@"%d",lifeCount];
 }
 -(IBAction)lifePlusAction:(id)sender{
     [_lm lifePlusOne];

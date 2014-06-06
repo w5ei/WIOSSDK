@@ -8,7 +8,7 @@
 
 #import "LifeManager.h"
 static int const MAX_LIVES_COUNT = 5;
-static int const LIFE_PLUS_INTERVAL_SECONDS = 60*30*0+15;
+static int const LIFE_PLUS_INTERVAL_SECONDS = 60*30;
 @implementation LifeManager{
     NSTimer* _timer;//增加生命计时器
     int _lifeCount;//当前生命数
@@ -139,32 +139,33 @@ static int const LIFE_PLUS_INTERVAL_SECONDS = 60*30*0+15;
             _lifePlusLeftTimeSeconds = [self isLifeFull]?0:LIFE_PLUS_INTERVAL_SECONDS;
         }
         
-        if (_delegate&&[_delegate respondsToSelector:@selector(lifeManagerTimerIsWorking:)]) {
+        if (_delegate&&[_delegate respondsToSelector:@selector(lifeManager:timerIsWorking:)]) {
             
-            [_delegate lifeManagerTimerIsWorking:_lifePlusLeftTimeSeconds];
+            [_delegate lifeManager:self timerIsWorking:_lifePlusLeftTimeSeconds];
         }
     }
-    
 //    NSLog(@"#####%@",self);
 }
 
 
 -(void)updateLifeCount:(int)count{
-    if (self.delegate&&[self.delegate respondsToSelector:@selector(lifeManagerLifeChanged:)]) {
-        [self.delegate lifeManagerLifeChanged:count];
+    if (self.delegate&&[self.delegate respondsToSelector:@selector(lifeManager:lifeChanged:)]) {
+        [self.delegate lifeManager:self lifeChanged:count];
     }
 }
 
 -(BOOL)isLifeFull{
     return self.lifeCount >= MAX_LIVES_COUNT;
 }
--(NSInteger)lifeCount{
+-(int)lifeCount{
     if (_timer) {
         return _lifeCount;
     }
     return [LifeManager lifeCount];
 }
-
+-(int)totalLeftTimeSeconds{
+    return _totalLeftTimeInterval;
+}
 #pragma mark-
 +(BOOL)isLifeFull{
     return [self isLifeFull:[LifeManager lifeCount]];

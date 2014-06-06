@@ -9,6 +9,10 @@
 #import <UIKit/UIKit.h>
 #import "LifeManager.h"
 
-@interface LifeManagerViewController : UIViewController<LifeManagerDelegate>
+@interface LifeManagerViewController : UIViewController<LifeManagerDelegate>{
+    __weak IBOutlet UILabel *_label;
+    __weak IBOutlet UILabel *_label2;
+    __weak IBOutlet UILabel *_label3;
+}
 
 @end
