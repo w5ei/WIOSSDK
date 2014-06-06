@@ -7,22 +7,27 @@
 //
 @protocol LifeManagerDelegate <NSObject>
 @optional
--(void)lifeManagerTimerIsWorking:(NSUInteger)lifePlusLeftTimeSeconds;
--(void)lifeManagerLifeChanged:(NSUInteger)lifeCount;
+-(void)lifeManagerTimerIsWorking:(int)lifePlusLeftTimeSeconds;
+-(void)lifeManagerLifeChanged:(int)lifeCount;
 @end
 #import <Foundation/Foundation.h>
 @interface LifeManager : NSObject
 @property(nonatomic,assign)id<LifeManagerDelegate>delegate;
-@property(nonatomic,readonly)NSInteger lifeCount;
-@property(nonatomic,readonly)NSInteger lifePlusLeftTimeSeconds;//增加一条生命剩余秒数
+@property(nonatomic,readonly)int lifeCount;
+@property(nonatomic,readonly)int lifePlusLeftTimeSeconds;//增加一条生命剩余秒数
 //-----
 //+(id)sharedInstance;
 +(id)lifeManager;
-+(NSUInteger)lifeCount;
--(BOOL)isLifeFull;
++(int)lifeCount;
 +(BOOL)isLifeFull;
++(BOOL)isLifeFull:(int)lifeCount;
+
+//调用这个方法会启动一个计时器并通过倒计时来动态减少回复生命时间
+-(void)start;
+//如果不调用这个方法更新后时间不会固化到本地
+-(void)stop;
+-(BOOL)isLifeFull;
 -(void)lifeMinusOne;
 -(void)lifePlusOne;
--(void)start;
--(void)stop;
+
 @end

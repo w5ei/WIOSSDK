@@ -18,10 +18,10 @@
 -(void)dealloc{
     [_lm stop];
 }
--(void)lifeManagerTimerIsWorking:(NSUInteger)lifePlusLeftTimeSeconds{
+-(void)lifeManagerTimerIsWorking:(int)lifePlusLeftTimeSeconds{
     NSLog(@">>>>%@",_lm);
 }
--(void)lifeManagerLifeChanged:(NSUInteger)lifeCount{
+-(void)lifeManagerLifeChanged:(int)lifeCount{
     NSLog(@"^^^^^^^^^^^^^^^^^^^^^NEW COUNT:%d",lifeCount);
 }
 -(IBAction)lifePlusAction:(id)sender{
