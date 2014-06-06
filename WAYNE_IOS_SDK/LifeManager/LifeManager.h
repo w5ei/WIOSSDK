@@ -1,9 +1,9 @@
 //
 //  LifeManager.h
-//  Version 1.0
+//  Version 2.0
 //
 //  Created by green wayne on 13-10-23.
-//  Copyright (c) 2013年 cubic. All rights reserved.
+//  Copyright (c) 2013年 wayne. All rights reserved.
 //
 @class LifeManager;
 @protocol LifeManagerDelegate <NSObject>
