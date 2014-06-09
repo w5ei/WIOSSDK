@@ -32,7 +32,7 @@
 /**通过传入的数据来更新本地数据*/
 -(void)syncWithMaxLifeCount:(int)maxLifeCount lifePlusTimeInterval:(int)lifePlusTimeInterval lifeCount:(int)lifeCount lifePlueLeftTimeSeconds:(int)lifePlueLeftTimeSeconds;
 /**与服务器步：得到服务器端的数据并更新本地数据*/
--(void)syncByServer;
+-(void)syncByServerWithResult:(void (^)(int maxLifeCount,int lifePlusTimeInterval,int lifeCount,int lifePlueLeftTimeSeconds))result;
 +(int)lifeCount;
 +(BOOL)isLifeFull;
 +(BOOL)isLifeFull:(int)lifeCount;

@@ -80,8 +80,10 @@
     _lifeCount = lifeCount;
     _lifePlusLeftTimeSeconds = lifePlueLeftTimeSeconds;
 }
--(void)syncByServer{
+-(void)syncByServerWithResult:(void (^)(int maxLifeCount,int lifePlusTimeInterval,int lifeCount,int lifePlueLeftTimeSeconds))result{
     //TODO: 从服务器得到数据 并调用 -(void)syncWithMaxLifeCount:(int)maxLifeCount lifePlusTimeInterval:(int)lifePlusTimeInterval lifeCount:(int)lifeCount lifePlueLeftTimeSeconds:(int)lifePlueLeftTimeSeconds; 方法
+    //test
+    result(60,30,60,0);
 }
 -(void)start{
     _maxLifeCount = [WLifeManager readMaxLifeCount];
@@ -136,7 +138,7 @@
         
         [self updateLifePlusLeftTimeSeconds:_lifePlusLeftTimeSeconds];
     }
-    NSLog(@"#####%@",self);
+//    NSLog(@"#####%@",self);
 }
 -(void)resume{
     if(_timer==nil)[self start];
