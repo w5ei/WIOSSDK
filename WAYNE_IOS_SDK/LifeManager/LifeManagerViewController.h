@@ -8,8 +8,8 @@
 
 #import <UIKit/UIKit.h>
 #import "LifeManager.h"
-
-@interface LifeManagerViewController : UIViewController<LifeManagerDelegate>{
+#import "WLifeManager.h"
+@interface LifeManagerViewController : UIViewController<LifeManagerDelegate,WLifeManagerDelegate>{
     __weak IBOutlet UILabel *_label;
     __weak IBOutlet UILabel *_label2;
     __weak IBOutlet UILabel *_label3;

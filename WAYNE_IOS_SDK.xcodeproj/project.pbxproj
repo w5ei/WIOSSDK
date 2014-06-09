@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		2465B6BA1941CC3F00BF3C81 /* WLifeManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 2465B6B91941CC3F00BF3C81 /* WLifeManager.m */; };
 		2490491A191B778100CDC909 /* StringUtil.m in Sources */ = {isa = PBXBuildFile; fileRef = 24904919191B778100CDC909 /* StringUtil.m */; };
 		24AC79761940475F005ECB08 /* RandomUtil.m in Sources */ = {isa = PBXBuildFile; fileRef = 24AC79751940475F005ECB08 /* RandomUtil.m */; };
 		7D48400317C5BD44009AC184 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7D48400217C5BD44009AC184 /* UIKit.framework */; };
@@ -94,6 +95,8 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		2465B6B81941CC3F00BF3C81 /* WLifeManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WLifeManager.h; sourceTree = "<group>"; };
+		2465B6B91941CC3F00BF3C81 /* WLifeManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WLifeManager.m; sourceTree = "<group>"; };
 		24904918191B778100CDC909 /* StringUtil.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = StringUtil.h; sourceTree = "<group>"; };
 		24904919191B778100CDC909 /* StringUtil.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = StringUtil.m; sourceTree = "<group>"; };
 		24AC79741940475F005ECB08 /* RandomUtil.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RandomUtil.h; sourceTree = "<group>"; };
@@ -590,11 +593,13 @@
 		7DC39B1F181A20CF0093EB13 /* LifeManager */ = {
 			isa = PBXGroup;
 			children = (
-				7DC39B20181A20E90093EB13 /* LifeManager.h */,
-				7DC39B21181A20E90093EB13 /* LifeManager.m */,
+				2465B6B81941CC3F00BF3C81 /* WLifeManager.h */,
+				2465B6B91941CC3F00BF3C81 /* WLifeManager.m */,
 				7DC39B23181A212A0093EB13 /* LifeManagerViewController.h */,
 				7DC39B24181A212A0093EB13 /* LifeManagerViewController.m */,
 				7DC39B25181A212A0093EB13 /* LifeManagerViewController.xib */,
+				7DC39B20181A20E90093EB13 /* LifeManager.h */,
+				7DC39B21181A20E90093EB13 /* LifeManager.m */,
 			);
 			path = LifeManager;
 			sourceTree = "<group>";
@@ -743,6 +748,7 @@
 				7DB87F0317DF077A000EEBA2 /* GameManager.m in Sources */,
 				7DB87F0D17DF07C1000EEBA2 /* CoverProgressView.m in Sources */,
 				7DA1594418338DD000B53857 /* ShareManager.m in Sources */,
+				2465B6BA1941CC3F00BF3C81 /* WLifeManager.m in Sources */,
 				7DB87F0E17DF07C1000EEBA2 /* MBProgressHUD.m in Sources */,
 				7DB87F0F17DF07C1000EEBA2 /* NumberView.m in Sources */,
 				7DB87F1017DF07C1000EEBA2 /* ViewGroup.m in Sources */,

@@ -10,14 +10,18 @@
 
 @interface LifeManagerViewController (){
     LifeManager* _lm;
+    WLifeManager* _wlm;
 }
 
 @end
 
 @implementation LifeManagerViewController
 -(void)dealloc{
-    [_lm stop];
+    if(_lm)[_lm stop];
+    if(_wlm)[_wlm stop];
 }
+
+
 -(void)lifeManager:(LifeManager*)lifeManger timerIsWorking:(int)lifePlusLeftTimeSeconds{
     _label.text = [NSString stringWithFormat:@"%02d:%02d",lifePlusLeftTimeSeconds/60%60,lifePlusLeftTimeSeconds%60];
     _label3.text = [NSString stringWithFormat:@"%02d:%02d:%02d",lifeManger.totalLeftTimeSeconds/60/60%60,lifeManger.totalLeftTimeSeconds/60%60,lifeManger.lifePlusLeftTimeSeconds%60];
@@ -25,11 +29,25 @@
 -(void)lifeManager:(LifeManager*)lifeManger lifeChanged:(int)lifeCount{
     _label2.text = [NSString stringWithFormat:@"%d",lifeCount];
 }
+
+
+-(void)wLifeManager:(WLifeManager*)lifeManger timerIsWorking:(int)lifePlusLeftTimeSeconds{
+    long totalLeftTimeSeconds = lifeManger.totalLeftTimeSeconds;
+    _label.text = [NSString stringWithFormat:@"%02d:%02d",lifePlusLeftTimeSeconds/60%60,lifePlusLeftTimeSeconds%60];
+    _label3.text = [NSString stringWithFormat:@"%02ld:%02ld:%02ld",totalLeftTimeSeconds/60/60%60,totalLeftTimeSeconds/60%60,totalLeftTimeSeconds%60];
+}
+-(void)wLifeManager:(WLifeManager*)lifeManger lifeChanged:(int)lifeCount{
+    _label2.text = [NSString stringWithFormat:@"%d",lifeCount];
+}
+
+
 -(IBAction)lifePlusAction:(id)sender{
-    [_lm lifePlusOne];
+    if(_lm)[_lm lifePlusOne];
+    if(_wlm)[_wlm lifePlusOne];
 }
 -(IBAction)lifeMinusAction:(id)sender{
-    [_lm lifeMinusOne];
+    if(_lm)[_lm lifeMinusOne];
+    if(_wlm)[_wlm lifeMinusOne];
 }
 
 #pragma mark- Life Cycle
@@ -37,7 +55,6 @@
 {
     self = [super initWithNibName:nibNameOrNil bundle:nibBundleOrNil];
     if (self) {
-        // Custom initialization
     }
     return self;
 }
@@ -45,10 +62,17 @@
 - (void)viewDidLoad
 {
     [super viewDidLoad];
-    _lm = [[LifeManager alloc]init];
-    _lm.delegate = self;
-    [_lm start];
-    NSLog(@">>>>>>>*****%@",_lm);
+//    _lm = [[LifeManager alloc]init];
+//    _lm.delegate = self;
+//    [_lm start];
+//    NSLog(@">>>>>>>*****%@",_lm);
+    _wlm = [WLifeManager instance];
+    _wlm.delegate = self;
+    if (_wlm.maxLifeCount==0) {
+        [_wlm startWithMaxLifeCount:5 lifePlusTimeInterval:20 lifeCount:5 lifePlueLeftTimeSeconds:0];
+    }else{
+        [_wlm start];
+    }
 }
 
 - (void)didReceiveMemoryWarning
