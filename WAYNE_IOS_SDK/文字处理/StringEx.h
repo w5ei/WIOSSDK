@@ -8,7 +8,7 @@
 
 #import <Foundation/Foundation.h>
 
-@interface StringUtil : NSObject
+@interface NSString(WEX)
 //-----
 +(NSString*)convertHanziToPinyin:(NSString*)hanzi;
 +(NSString*)convertHanziToPinyinInitials:(NSString *)hanzi;

@@ -11,8 +11,8 @@
 #import "LifeManagerViewController.h"
 #import "NotificationViewController.h"
 #import "NumberView.h"
-#import "文字处理/StringUtil.h"
-
+#import "文字处理/StringEx.h"
+#import "DateEx.h"
 @interface MenuViewController (){
     NSArray* _menuItemNames;
 }
@@ -22,10 +22,10 @@
 
 -(void)test{
     NSString *hanzi = @"我的天空多么的清晰";
-    NSLog(@"%@",[StringUtil convertHanziToPinyin:hanzi]);
-    NSLog(@"%@",[StringUtil convertHanziToPinyinInitials:hanzi]);
+    NSLog(@"%@",[NSString convertHanziToPinyin:hanzi]);
+    NSLog(@"%@",[NSString convertHanziToPinyinInitials:hanzi]);
     NSString *py,*pyi;
-    [StringUtil convertHanzi:hanzi toPinyin:&py andPinyinInitials:&pyi];
+    [NSString convertHanzi:hanzi toPinyin:&py andPinyinInitials:&pyi];
     NSLog(@"%@  %@",py, pyi);
 }
 
@@ -92,7 +92,9 @@
                            ,@"Notification"
                            ];
     }
-    [self test];
+//    [self test];
+    NSDate *date = [NSDate dateWithISO8601String:@"2014-06-10T16:27:48.09"];
+    NSLog(@"~~~~~~~~~~~:  %@",[date iso8601Format]);
 }
 
 - (void)didReceiveMemoryWarning

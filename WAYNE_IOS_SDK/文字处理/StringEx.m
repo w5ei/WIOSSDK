@@ -6,9 +6,10 @@
 //  Copyright (c) 2014年 green wayne. All rights reserved.
 //
 
-#import "StringUtil.h"
-
-@implementation StringUtil
+#import "StringEx.h"
+#include <CommonCrypto/CommonDigest.h>
+#include <CommonCrypto/CommonHMAC.h>
+@implementation NSString(WEX)
 +(void)convertHanzi:(NSString*)hanzi toPinyin:(NSString**)pinyin andPinyinInitials:(NSString**)pinyinInitials{
     NSMutableString* py = [NSMutableString string];
     NSMutableString* pyi = [NSMutableString string];
@@ -38,5 +39,35 @@
         [result appendString:[pinyin substringToIndex:1]];
     }
     return result;
+}
++(NSString *)hmacsha1:(NSString *)data secret:(NSString *)key {
+    
+    const char *cKey  = [key cStringUsingEncoding:NSASCIIStringEncoding];
+    const char *cData = [data cStringUsingEncoding:NSASCIIStringEncoding];
+    
+    unsigned char cHMAC[CC_SHA1_DIGEST_LENGTH];
+    
+    CCHmac(kCCHmacAlgSHA1, cKey, strlen(cKey), cData, strlen(cData), cHMAC);
+    
+    NSData *HMAC = [[NSData alloc] initWithBytes:cHMAC length:sizeof(cHMAC)];
+    
+    NSString *hash = [HMAC base64Encoding];
+    
+    return hash;
+}
++(NSString *)hmacsha256WithData:(NSString *)data key:(NSString *)key {
+    
+    const char *cKey  = [key cStringUsingEncoding:NSASCIIStringEncoding];
+    const char *cData = [data cStringUsingEncoding:NSASCIIStringEncoding];
+    
+    unsigned char cHMAC[CC_SHA256_DIGEST_LENGTH];
+    
+    CCHmac(kCCHmacAlgSHA256, cKey, strlen(cKey), cData, strlen(cData), cHMAC);
+    
+    NSData *HMAC = [[NSData alloc] initWithBytes:cHMAC length:sizeof(cHMAC)];
+    
+    NSString *hash = [HMAC base64Encoding];
+    
+    return hash;
 }
 @end

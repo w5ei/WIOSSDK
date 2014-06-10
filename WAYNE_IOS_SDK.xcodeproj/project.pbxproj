@@ -8,7 +8,8 @@
 
 /* Begin PBXBuildFile section */
 		2465B6BA1941CC3F00BF3C81 /* WLifeManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 2465B6B91941CC3F00BF3C81 /* WLifeManager.m */; };
-		2490491A191B778100CDC909 /* StringUtil.m in Sources */ = {isa = PBXBuildFile; fileRef = 24904919191B778100CDC909 /* StringUtil.m */; };
+		2490491A191B778100CDC909 /* StringEx.m in Sources */ = {isa = PBXBuildFile; fileRef = 24904919191B778100CDC909 /* StringEx.m */; };
+		24A858681946EABC00784729 /* DateEx.m in Sources */ = {isa = PBXBuildFile; fileRef = 24A858671946EABC00784729 /* DateEx.m */; };
 		24AC79761940475F005ECB08 /* RandomUtil.m in Sources */ = {isa = PBXBuildFile; fileRef = 24AC79751940475F005ECB08 /* RandomUtil.m */; };
 		7D48400317C5BD44009AC184 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7D48400217C5BD44009AC184 /* UIKit.framework */; };
 		7D48400517C5BD44009AC184 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7D48400417C5BD44009AC184 /* Foundation.framework */; };
@@ -97,8 +98,10 @@
 /* Begin PBXFileReference section */
 		2465B6B81941CC3F00BF3C81 /* WLifeManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WLifeManager.h; sourceTree = "<group>"; };
 		2465B6B91941CC3F00BF3C81 /* WLifeManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WLifeManager.m; sourceTree = "<group>"; };
-		24904918191B778100CDC909 /* StringUtil.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = StringUtil.h; sourceTree = "<group>"; };
-		24904919191B778100CDC909 /* StringUtil.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = StringUtil.m; sourceTree = "<group>"; };
+		24904918191B778100CDC909 /* StringEx.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = StringEx.h; sourceTree = "<group>"; };
+		24904919191B778100CDC909 /* StringEx.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = StringEx.m; sourceTree = "<group>"; };
+		24A858661946EABC00784729 /* DateEx.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DateEx.h; sourceTree = "<group>"; };
+		24A858671946EABC00784729 /* DateEx.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DateEx.m; sourceTree = "<group>"; };
 		24AC79741940475F005ECB08 /* RandomUtil.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RandomUtil.h; sourceTree = "<group>"; };
 		24AC79751940475F005ECB08 /* RandomUtil.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RandomUtil.m; sourceTree = "<group>"; };
 		7D483FFF17C5BD44009AC184 /* WAYNE_IOS_SDK.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = WAYNE_IOS_SDK.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -267,8 +270,10 @@
 		24904917191B76E100CDC909 /* 文字处理 */ = {
 			isa = PBXGroup;
 			children = (
-				24904918191B778100CDC909 /* StringUtil.h */,
-				24904919191B778100CDC909 /* StringUtil.m */,
+				24904918191B778100CDC909 /* StringEx.h */,
+				24904919191B778100CDC909 /* StringEx.m */,
+				24A858661946EABC00784729 /* DateEx.h */,
+				24A858671946EABC00784729 /* DateEx.m */,
 			);
 			path = "文字处理";
 			sourceTree = "<group>";
@@ -725,7 +730,7 @@
 				7D4AE8661818C87D00B19465 /* TimeUtil.m in Sources */,
 				7DEFA579180EA28A003E0CFF /* InAppPurchaseViewController.m in Sources */,
 				7DA1F9FF1805710E007459B1 /* MenuViewController.m in Sources */,
-				2490491A191B778100CDC909 /* StringUtil.m in Sources */,
+				2490491A191B778100CDC909 /* StringEx.m in Sources */,
 				24AC79761940475F005ECB08 /* RandomUtil.m in Sources */,
 				7D48401317C5BD45009AC184 /* AppDelegate.m in Sources */,
 				7DA24927181E0E7700E9C7B5 /* NotificationManager.m in Sources */,
@@ -749,6 +754,7 @@
 				7DB87F0D17DF07C1000EEBA2 /* CoverProgressView.m in Sources */,
 				7DA1594418338DD000B53857 /* ShareManager.m in Sources */,
 				2465B6BA1941CC3F00BF3C81 /* WLifeManager.m in Sources */,
+				24A858681946EABC00784729 /* DateEx.m in Sources */,
 				7DB87F0E17DF07C1000EEBA2 /* MBProgressHUD.m in Sources */,
 				7DB87F0F17DF07C1000EEBA2 /* NumberView.m in Sources */,
 				7DB87F1017DF07C1000EEBA2 /* ViewGroup.m in Sources */,
