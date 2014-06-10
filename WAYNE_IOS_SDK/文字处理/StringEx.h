@@ -13,4 +13,6 @@
 +(NSString*)convertHanziToPinyin:(NSString*)hanzi;
 +(NSString*)convertHanziToPinyinInitials:(NSString *)hanzi;
 +(void)convertHanzi:(NSString*)hanzi toPinyin:(NSString**)pinyin andPinyinInitials:(NSString**)pinyinInitials;
++(NSString *)hmacsha1:(NSString *)data secret:(NSString *)key;
++(NSString *)hmacsha256WithData:(NSString *)data key:(NSString *)key;
 @end
