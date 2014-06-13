@@ -16,3 +16,16 @@
 +(NSString *)hmacsha1:(NSString *)data secret:(NSString *)key;
 +(NSString *)hmacsha256WithData:(NSString *)data key:(NSString *)key;
 @end
+
+@interface NSString (SubStringOneByOne)
+-(NSMutableArray*)subStringOneByOne;
++(NSMutableArray*)subStringOneByOne:(NSString*)str;
+-(NSString*)i18n;
+@end
+@interface NSString (RegularExpression)
+-(NSUInteger)byteLength;
+-(BOOL)isValidEmailAdress;
+-(BOOL)isValidPhoneNumber;
+-(NSString *) md5;
+-(BOOL)containsChineseCharacter;
+@end

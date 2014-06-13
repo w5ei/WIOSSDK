@@ -11,18 +11,7 @@
 @interface CommonEx : NSObject
 
 @end
-#pragma mark- NSString
-@interface NSString (SubStringOneByOne)
--(NSMutableArray*)subStringOneByOne;
-+(NSMutableArray*)subStringOneByOne:(NSString*)str;
--(NSString*)i18n;
-@end
-@interface NSString (RegularExpression)
--(NSUInteger)byteLength;
--(BOOL)isValidEmailAdress;
--(NSString *) md5;
--(BOOL)containsChineseCharacter;
-@end
+
 #pragma mark- NSArray
 @interface NSArray (NSReallyContainArray)
 -(BOOL)reallyContainsObject:(id)anObject;

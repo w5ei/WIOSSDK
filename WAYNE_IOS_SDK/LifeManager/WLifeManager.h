@@ -10,8 +10,8 @@
 @class WLifeManager;
 @protocol WLifeManagerDelegate <NSObject>
 @optional
--(void)wLifeManager:(WLifeManager*)lifeManger timerIsWorking:(int)lifePlusLeftTimeSeconds;
--(void)wLifeManager:(WLifeManager*)lifeManger lifeChanged:(int)lifeCount;
+-(void)wLifeManager:(WLifeManager*)lifeManager timerIsWorking:(int)lifePlusLeftTimeSeconds;
+-(void)wLifeManager:(WLifeManager*)lifeManager lifeChanged:(int)lifeCount;
 @end
 /**
  * 这个生命管理主要用于服务器的同步显示,并且本地计算基于

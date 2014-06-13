@@ -79,6 +79,11 @@
     _lifePlusTimeInterval = lifePlusTimeInterval;
     _lifeCount = lifeCount;
     _lifePlusLeftTimeSeconds = lifePlueLeftTimeSeconds;
+//    if (_totalLeftTimeSeconds>_lifePlusTimeInterval) {
+//        _lifePlusLeftTimeSeconds = _totalLeftTimeSeconds%_lifePlusTimeInterval;
+//    }else{
+//        _lifePlusLeftTimeSeconds = _totalLeftTimeSeconds;
+//    }
 }
 -(void)syncByServerWithResult:(void (^)(int maxLifeCount,int lifePlusTimeInterval,int lifeCount,int lifePlueLeftTimeSeconds))result{
     //TODO: 从服务器得到数据 并调用 -(void)syncWithMaxLifeCount:(int)maxLifeCount lifePlusTimeInterval:(int)lifePlusTimeInterval lifeCount:(int)lifeCount lifePlueLeftTimeSeconds:(int)lifePlueLeftTimeSeconds; 方法
@@ -88,7 +93,6 @@
 -(void)start{
     _maxLifeCount = [WLifeManager readMaxLifeCount];
     _lifePlusTimeInterval = [WLifeManager readLifePlusTimeInterval];
-    
     _totalLeftTimeSeconds = [WLifeManager totalLeftTimeSeconds];
     
     if (_totalLeftTimeSeconds>0) {
@@ -116,6 +120,10 @@
 -(void)startTimer{
     [self updateLifeCount:_lifeCount];
     [self updateLifePlusLeftTimeSeconds:_lifePlusLeftTimeSeconds];
+    if (_lifePlusLeftTimeSeconds==0) {
+        _lifePlusLeftTimeSeconds = _lifePlusTimeInterval;
+        _totalLeftTimeSeconds-=_lifePlusTimeInterval;
+    }
     //无论是否计时都开一个计时器。这样当生命减少时不用做额外设置
     if (_timer) {
         [self pause];
@@ -127,13 +135,16 @@
     if (_totalLeftTimeSeconds>0) {
         
         _totalLeftTimeSeconds--;
+        
         _lifePlusLeftTimeSeconds--;
         
         if (_lifePlusLeftTimeSeconds<=0) {
+            
             _lifeCount+=1;
             [self updateLifeCount:_lifeCount];
             
             _lifePlusLeftTimeSeconds = [self isLifeFull]?0:_lifePlusTimeInterval;
+            
         }
         
         [self updateLifePlusLeftTimeSeconds:_lifePlusLeftTimeSeconds];
@@ -183,7 +194,7 @@
         [self updateLifePlusLeftTimeSeconds:_lifePlusLeftTimeSeconds];
     }
     
-    NSLog(@"#####%@",self);
+//    NSLog(@"#####%@",self);
 }
 +(void)lifeMinusOne{
     int lifeCount = [self readLifeCount];
