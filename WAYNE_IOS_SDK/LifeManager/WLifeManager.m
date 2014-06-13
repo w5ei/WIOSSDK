@@ -107,6 +107,12 @@
         _lifeCount = [WLifeManager readLifeCount];
     }
     
+    if (_totalLeftTimeSeconds>=_lifePlusTimeInterval&&_lifePlusLeftTimeSeconds==0) {
+        _lifePlusLeftTimeSeconds = _lifePlusTimeInterval;
+        _totalLeftTimeSeconds-=_lifePlusTimeInterval;
+        _lifeCount+=1;
+    }
+    
     [self startTimer];
 }
 
@@ -114,16 +120,19 @@
     
     [self syncWithMaxLifeCount:maxLifeCount lifePlusTimeInterval:lifePlusTimeInterval lifeCount:lifeCount lifePlueLeftTimeSeconds:lifePlueLeftTimeSeconds];
     
+    if (_totalLeftTimeSeconds>=_lifePlusTimeInterval&&_lifePlusLeftTimeSeconds==0) {
+        _lifePlusLeftTimeSeconds = _lifePlusTimeInterval;
+        _totalLeftTimeSeconds-=_lifePlusTimeInterval;
+        _lifeCount+=1;
+    }
+    
     [self startTimer];
 }
 
 -(void)startTimer{
     [self updateLifeCount:_lifeCount];
     [self updateLifePlusLeftTimeSeconds:_lifePlusLeftTimeSeconds];
-    if (_lifePlusLeftTimeSeconds==0) {
-        _lifePlusLeftTimeSeconds = _lifePlusTimeInterval;
-        _totalLeftTimeSeconds-=_lifePlusTimeInterval;
-    }
+    
     //无论是否计时都开一个计时器。这样当生命减少时不用做额外设置
     if (_timer) {
         [self pause];
