@@ -299,7 +299,10 @@
     }
     //否则计算出当前生命数量
     int lifePlusTimeInterval = [self readLifePlusTimeInterval];
-    int weakLifeCount = ceil((double)totalLeftTimeSeconds/lifePlusTimeInterval);
+    int weakLifeCount = 1;
+    if (totalLeftTimeSeconds>lifePlusTimeInterval) {
+        weakLifeCount = floor((double)totalLeftTimeSeconds/lifePlusTimeInterval);
+    }
     return maxLifeCount-weakLifeCount;
 }
 
