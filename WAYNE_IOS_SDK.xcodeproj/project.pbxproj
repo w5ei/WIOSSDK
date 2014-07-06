@@ -93,6 +93,11 @@
 		7DEFA573180EA0BF003E0CFF /* InAppPurchaserApple.m in Sources */ = {isa = PBXBuildFile; fileRef = 7DEFA571180EA0BF003E0CFF /* InAppPurchaserApple.m */; };
 		7DEFA579180EA28A003E0CFF /* InAppPurchaseViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 7DEFA577180EA28A003E0CFF /* InAppPurchaseViewController.m */; };
 		7DEFA57A180EA28A003E0CFF /* InAppPurchaseViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 7DEFA578180EA28A003E0CFF /* InAppPurchaseViewController.xib */; };
+		AFB687E6195C33720098B4BC /* CityPickerViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = AFB687E5195C33720098B4BC /* CityPickerViewController.m */; };
+		AFB687EA195C34E70098B4BC /* LineSwitch.m in Sources */ = {isa = PBXBuildFile; fileRef = AFB687E8195C34E70098B4BC /* LineSwitch.m */; };
+		AFB687EB195C34E70098B4BC /* LineSwitch.xib in Resources */ = {isa = PBXBuildFile; fileRef = AFB687E9195C34E70098B4BC /* LineSwitch.xib */; };
+		AFB687ED195C35A80098B4BC /* citydict.plist in Resources */ = {isa = PBXBuildFile; fileRef = AFB687EC195C35A80098B4BC /* citydict.plist */; };
+		AFB687F1195C3BFA0098B4BC /* IndexNamesViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = AFB687EF195C3BFA0098B4BC /* IndexNamesViewController.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -233,6 +238,15 @@
 		7DEFA576180EA28A003E0CFF /* InAppPurchaseViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = InAppPurchaseViewController.h; sourceTree = "<group>"; };
 		7DEFA577180EA28A003E0CFF /* InAppPurchaseViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = InAppPurchaseViewController.m; sourceTree = "<group>"; };
 		7DEFA578180EA28A003E0CFF /* InAppPurchaseViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = InAppPurchaseViewController.xib; sourceTree = "<group>"; };
+		AFB687E4195C33720098B4BC /* CityPickerViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CityPickerViewController.h; sourceTree = "<group>"; };
+		AFB687E5195C33720098B4BC /* CityPickerViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CityPickerViewController.m; sourceTree = "<group>"; };
+		AFB687E7195C34E70098B4BC /* LineSwitch.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LineSwitch.h; sourceTree = "<group>"; };
+		AFB687E8195C34E70098B4BC /* LineSwitch.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LineSwitch.m; sourceTree = "<group>"; };
+		AFB687E9195C34E70098B4BC /* LineSwitch.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = LineSwitch.xib; sourceTree = "<group>"; };
+		AFB687EC195C35A80098B4BC /* citydict.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = citydict.plist; sourceTree = "<group>"; };
+		AFB687EE195C3BFA0098B4BC /* IndexNamesViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = IndexNamesViewController.h; sourceTree = "<group>"; };
+		AFB687EF195C3BFA0098B4BC /* IndexNamesViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = IndexNamesViewController.m; sourceTree = "<group>"; };
+		AFB687F0195C3BFA0098B4BC /* IndexNamesViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = IndexNamesViewController.xib; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -270,10 +284,19 @@
 		24904917191B76E100CDC909 /* 文字处理 */ = {
 			isa = PBXGroup;
 			children = (
+				AFB687E4195C33720098B4BC /* CityPickerViewController.h */,
+				AFB687E5195C33720098B4BC /* CityPickerViewController.m */,
+				AFB687EE195C3BFA0098B4BC /* IndexNamesViewController.h */,
+				AFB687EF195C3BFA0098B4BC /* IndexNamesViewController.m */,
+				AFB687F0195C3BFA0098B4BC /* IndexNamesViewController.xib */,
+				AFB687EC195C35A80098B4BC /* citydict.plist */,
 				24904918191B778100CDC909 /* StringEx.h */,
 				24904919191B778100CDC909 /* StringEx.m */,
 				24A858661946EABC00784729 /* DateEx.h */,
 				24A858671946EABC00784729 /* DateEx.m */,
+				AFB687E7195C34E70098B4BC /* LineSwitch.h */,
+				AFB687E8195C34E70098B4BC /* LineSwitch.m */,
+				AFB687E9195C34E70098B4BC /* LineSwitch.xib */,
 			);
 			path = "文字处理";
 			sourceTree = "<group>";
@@ -700,8 +723,10 @@
 				7D48402517C5BD45009AC184 /* second.png in Resources */,
 				7D48402717C5BD45009AC184 /* second@2x.png in Resources */,
 				7D9A9D5F1803D3B300233E8C /* UMSCommentInputControlleriPad.xib in Resources */,
+				AFB687ED195C35A80098B4BC /* citydict.plist in Resources */,
 				7DE5E7651803FCA2001BB491 /* Icon.png in Resources */,
 				7D9A9D5E1803D3B300233E8C /* UMSCommentInputController.xib in Resources */,
+				AFB687EB195C34E70098B4BC /* LineSwitch.xib in Resources */,
 				7D9A9D631803D3B300233E8C /* UMSnsAccountViewController.xib in Resources */,
 				7DA1FA001805710E007459B1 /* MenuViewController.xib in Resources */,
 				7D48402A17C5BD45009AC184 /* FirstViewController.xib in Resources */,
@@ -735,6 +760,7 @@
 				7D48401317C5BD45009AC184 /* AppDelegate.m in Sources */,
 				7DA24927181E0E7700E9C7B5 /* NotificationManager.m in Sources */,
 				7DA1F9FA18057046007459B1 /* NotificationViewController.m in Sources */,
+				AFB687EA195C34E70098B4BC /* LineSwitch.m in Sources */,
 				7D48401C17C5BD45009AC184 /* FirstViewController.m in Sources */,
 				7D48402317C5BD45009AC184 /* SecondViewController.m in Sources */,
 				7DB87EDC17DEFE1E000EEBA2 /* CommonEx.m in Sources */,
@@ -754,8 +780,10 @@
 				7DB87F0D17DF07C1000EEBA2 /* CoverProgressView.m in Sources */,
 				7DA1594418338DD000B53857 /* ShareManager.m in Sources */,
 				2465B6BA1941CC3F00BF3C81 /* WLifeManager.m in Sources */,
+				AFB687F1195C3BFA0098B4BC /* IndexNamesViewController.m in Sources */,
 				24A858681946EABC00784729 /* DateEx.m in Sources */,
 				7DB87F0E17DF07C1000EEBA2 /* MBProgressHUD.m in Sources */,
+				AFB687E6195C33720098B4BC /* CityPickerViewController.m in Sources */,
 				7DB87F0F17DF07C1000EEBA2 /* NumberView.m in Sources */,
 				7DB87F1017DF07C1000EEBA2 /* ViewGroup.m in Sources */,
 				7DEFA573180EA0BF003E0CFF /* InAppPurchaserApple.m in Sources */,

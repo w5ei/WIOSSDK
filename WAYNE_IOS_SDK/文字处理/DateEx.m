@@ -25,8 +25,8 @@ static NSString * const FormatString19 = @"yyyy-MM-dd'T'HH:mm:ss";
     return iso8601String;
 }
 +(id)dateWithISO8601String:(NSString*)str{
-    if (str.length<19) {
-        return @"plz use iso8601 format string";
+    if (str==nil||str.length<19) {
+        return [NSDate date];
     }
     NSDateFormatter *dateFormatter = [NSDateFormatter new];
     NSLocale *locale = [[NSLocale alloc]initWithLocaleIdentifier:@"zh_Hans_CN"];

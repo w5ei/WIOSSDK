@@ -8,6 +8,7 @@
 
 #import "FirstViewController.h"
 #import "CommonEx.h"
+#import "StringEx.h"
 @interface FirstViewController ()
 
 @end

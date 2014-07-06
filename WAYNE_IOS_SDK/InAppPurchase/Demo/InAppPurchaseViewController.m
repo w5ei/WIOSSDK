@@ -9,6 +9,7 @@
 #import "InAppPurchaseViewController.h"
 #import "MBProgressHUD.h"
 #import "CommonEx.h"
+#import "StringEx.h"
 @implementation ProductExtraInfo
 @end
 @interface InAppPurchaseViewController (){
