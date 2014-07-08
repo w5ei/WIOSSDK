@@ -129,3 +129,11 @@
     return false;
 }
 @end
+@implementation NSString (URL)
+-(NSString *)urlDecodeFormat
+{
+    NSString *result = [(NSString *)self stringByReplacingOccurrencesOfString:@"+" withString:@" "];
+    result = [result stringByReplacingPercentEscapesUsingEncoding:NSUTF8StringEncoding];
+    return result;
+}
+@end

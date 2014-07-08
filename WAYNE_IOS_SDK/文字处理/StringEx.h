@@ -29,3 +29,6 @@
 -(NSString *) md5;
 -(BOOL)containsChineseCharacter;
 @end
+@interface NSString (URL)
+-(NSString *)urlDecodeFormat;
+@end
