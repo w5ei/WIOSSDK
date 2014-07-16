@@ -151,8 +151,12 @@
             
             _lifeCount+=1;
             [self updateLifeCount:_lifeCount];
-            
-            _lifePlusLeftTimeSeconds = [self isLifeFull]?0:_lifePlusTimeInterval;
+            if ([self isLifeFull]) {
+                _lifePlusLeftTimeSeconds = 0;
+                _totalLeftTimeSeconds = 0;
+            }else{
+                _lifePlusLeftTimeSeconds = _lifePlusTimeInterval;
+            }
             
         }
         

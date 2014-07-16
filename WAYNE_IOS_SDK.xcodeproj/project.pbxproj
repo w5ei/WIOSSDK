@@ -98,6 +98,7 @@
 		AFB687EB195C34E70098B4BC /* LineSwitch.xib in Resources */ = {isa = PBXBuildFile; fileRef = AFB687E9195C34E70098B4BC /* LineSwitch.xib */; };
 		AFB687ED195C35A80098B4BC /* citydict.plist in Resources */ = {isa = PBXBuildFile; fileRef = AFB687EC195C35A80098B4BC /* citydict.plist */; };
 		AFB687F1195C3BFA0098B4BC /* IndexNamesViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = AFB687EF195C3BFA0098B4BC /* IndexNamesViewController.m */; };
+		AFB6C7721975400C001246E9 /* WStepper.m in Sources */ = {isa = PBXBuildFile; fileRef = AFB6C7711975400C001246E9 /* WStepper.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -247,6 +248,8 @@
 		AFB687EE195C3BFA0098B4BC /* IndexNamesViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = IndexNamesViewController.h; sourceTree = "<group>"; };
 		AFB687EF195C3BFA0098B4BC /* IndexNamesViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = IndexNamesViewController.m; sourceTree = "<group>"; };
 		AFB687F0195C3BFA0098B4BC /* IndexNamesViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = IndexNamesViewController.xib; sourceTree = "<group>"; };
+		AFB6C7701975400C001246E9 /* WStepper.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WStepper.h; sourceTree = "<group>"; };
+		AFB6C7711975400C001246E9 /* WStepper.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WStepper.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -614,6 +617,8 @@
 				7DB87F0C17DF07C1000EEBA2 /* ViewGroup.m */,
 				7DA1594218338DD000B53857 /* ShareManager.h */,
 				7DA1594318338DD000B53857 /* ShareManager.m */,
+				AFB6C7701975400C001246E9 /* WStepper.h */,
+				AFB6C7711975400C001246E9 /* WStepper.m */,
 			);
 			name = Views;
 			sourceTree = "<group>";
@@ -781,6 +786,7 @@
 				7DA1594418338DD000B53857 /* ShareManager.m in Sources */,
 				2465B6BA1941CC3F00BF3C81 /* WLifeManager.m in Sources */,
 				AFB687F1195C3BFA0098B4BC /* IndexNamesViewController.m in Sources */,
+				AFB6C7721975400C001246E9 /* WStepper.m in Sources */,
 				24A858681946EABC00784729 /* DateEx.m in Sources */,
 				7DB87F0E17DF07C1000EEBA2 /* MBProgressHUD.m in Sources */,
 				AFB687E6195C33720098B4BC /* CityPickerViewController.m in Sources */,

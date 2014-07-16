@@ -7,7 +7,7 @@
 //
 
 #import "LifeManagerViewController.h"
-
+#import "WStepper.h"
 @interface LifeManagerViewController (){
     LifeManager* _lm;
     WLifeManager* _wlm;
@@ -73,6 +73,12 @@
     }else{
         [_wlm start];
     }
+    
+    WStepper *stepper = [[WStepper alloc]initWithFrame:CGRectMake(0, 400, 320, 50)];
+    stepper.backgroundColor = [UIColor redColor];
+    stepper.minusButton.backgroundColor = [UIColor greenColor];
+    stepper.plusButton.backgroundColor = [UIColor blueColor];
+    [self.view addSubview:stepper];
 }
 
 - (void)didReceiveMemoryWarning
