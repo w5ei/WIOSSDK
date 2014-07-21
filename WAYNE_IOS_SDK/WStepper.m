@@ -76,10 +76,21 @@
         return;
     }
     _value = value;
+    [self sendActionsForControlEvents:UIControlEventValueChanged];
 }
 -(void)setMaximumValue:(double)maximumValue{
     if (maximumValue>_minimumValue) {
         _maximumValue = maximumValue;
+        if (maximumValue<self.value) {
+            self.value = maximumValue;
+        }
+    }
+}
+-(void)setMinimumValue:(double)minimumValue{
+    _minimumValue = minimumValue;
+    if (minimumValue>_value) {
+        self.value = minimumValue;
+        [self updateView];
     }
 }
 -(void)setStepValue:(double)stepValue{
@@ -91,8 +102,8 @@
     }
 }
 -(void)timeGoesBy{
-    if (_holdSeconds<=3) {
-        _holdSeconds+=TimeInterval;
+    if (_holdSeconds<=5) {
+        _holdSeconds+=TimeInterval*2;
         int holdSec = (int)(_holdSeconds*10);
         if (holdSec%10==0) {
             if (_isPlusTouchDown) {
