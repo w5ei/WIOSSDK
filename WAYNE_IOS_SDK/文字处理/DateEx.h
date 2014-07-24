@@ -11,4 +11,5 @@
 @interface NSDate (WEX)
 -(NSString*)iso8601Format;
 +(id)dateWithISO8601String:(NSString*)str;
+-(NSDate*)todayEndTime;
 @end

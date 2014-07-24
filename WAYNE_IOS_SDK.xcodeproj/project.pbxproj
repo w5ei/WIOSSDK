@@ -99,6 +99,7 @@
 		AFB687ED195C35A80098B4BC /* citydict.plist in Resources */ = {isa = PBXBuildFile; fileRef = AFB687EC195C35A80098B4BC /* citydict.plist */; };
 		AFB687F1195C3BFA0098B4BC /* IndexNamesViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = AFB687EF195C3BFA0098B4BC /* IndexNamesViewController.m */; };
 		AFB6C7721975400C001246E9 /* WStepper.m in Sources */ = {isa = PBXBuildFile; fileRef = AFB6C7711975400C001246E9 /* WStepper.m */; };
+		AFB8962D197E509C003EEF99 /* NaviCoverView.m in Sources */ = {isa = PBXBuildFile; fileRef = AFB8962C197E509C003EEF99 /* NaviCoverView.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -250,6 +251,8 @@
 		AFB687F0195C3BFA0098B4BC /* IndexNamesViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = IndexNamesViewController.xib; sourceTree = "<group>"; };
 		AFB6C7701975400C001246E9 /* WStepper.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WStepper.h; sourceTree = "<group>"; };
 		AFB6C7711975400C001246E9 /* WStepper.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WStepper.m; sourceTree = "<group>"; };
+		AFB8962B197E509C003EEF99 /* NaviCoverView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NaviCoverView.h; sourceTree = "<group>"; };
+		AFB8962C197E509C003EEF99 /* NaviCoverView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NaviCoverView.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -619,6 +622,8 @@
 				7DA1594318338DD000B53857 /* ShareManager.m */,
 				AFB6C7701975400C001246E9 /* WStepper.h */,
 				AFB6C7711975400C001246E9 /* WStepper.m */,
+				AFB8962B197E509C003EEF99 /* NaviCoverView.h */,
+				AFB8962C197E509C003EEF99 /* NaviCoverView.m */,
 			);
 			name = Views;
 			sourceTree = "<group>";
@@ -777,6 +782,7 @@
 				7DC39B26181A212A0093EB13 /* LifeManagerViewController.m in Sources */,
 				7DB87EF517DF06BC000EEBA2 /* UIButtonEx.m in Sources */,
 				7D9A96F9181237A900E75B0D /* FBManager.m in Sources */,
+				AFB8962D197E509C003EEF99 /* NaviCoverView.m in Sources */,
 				7DB87EF917DF0764000EEBA2 /* GameLevel.m in Sources */,
 				7DC39B22181A20E90093EB13 /* LifeManager.m in Sources */,
 				7DAA5CD9182210D60044C307 /* AnimationUtil.m in Sources */,

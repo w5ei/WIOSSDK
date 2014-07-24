@@ -9,7 +9,27 @@
 #import "AnimationUtil.h"
 
 @implementation AnimationUtil
-
+-(void)doScaleUpDownAnimationForView:(UIView*)view{
+    //如果需要签到做动画
+    //否则移除动画
+    [CATransaction begin];
+    [CATransaction setCompletionBlock:^{
+        if (YES) {
+            [self doScaleUpDownAnimationForView:view];
+        }
+    }];
+    CABasicAnimation *animation=[CABasicAnimation animationWithKeyPath:@"transform.scale"];
+    animation.fromValue = [NSNumber numberWithFloat:1.0];
+    animation.toValue = [NSNumber numberWithFloat:1.1];
+    animation.duration = 0.25;
+    animation.autoreverses = YES;
+    animation.repeatCount = 2;
+    animation.beginTime = CACurrentMediaTime()+1.55;
+    animation.removedOnCompletion = YES;
+    animation.fillMode = kCAFillModeForwards;
+    [view.layer addAnimation:animation forKey:nil];
+    [CATransaction commit];
+}
 -(void)doSomkeAnimationForView:(UIImageView*)view{
     static NSMutableArray* _deleteAnimationImages;
     if (_deleteAnimationImages==nil) {

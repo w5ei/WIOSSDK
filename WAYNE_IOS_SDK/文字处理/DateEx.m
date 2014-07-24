@@ -47,4 +47,13 @@ static NSString * const FormatString19 = @"yyyy-MM-dd'T'HH:mm:ss";
     NSDate *date = [dateFormatter dateFromString:str];
     return date;
 }
+-(NSDate*)todayEndTime{
+    NSCalendar * calendar = [NSCalendar currentCalendar];
+    NSDateComponents *comps = [calendar components:NSCalendarUnitYear|NSCalendarUnitMonth|NSCalendarUnitDay                |NSCalendarUnitHour|NSCalendarUnitMinute|NSCalendarUnitSecond fromDate:self];
+    [comps setHour:23];
+    [comps setMinute:59];
+    [comps setSecond:59];
+    NSDate *date = [calendar dateFromComponents:comps];
+    return date;
+}
 @end
