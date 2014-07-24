@@ -11,9 +11,10 @@
 #import "LifeManagerViewController.h"
 #import "NotificationViewController.h"
 #import "NumberView.h"
-#import "文字处理/StringEx.h"
+#import "StringEx.h"
 #import "DateEx.h"
 #import "NaviCoverView.h"
+#import "CommonEx.h"
 @interface MenuViewController (){
     NSArray* _menuItemNames;
 }
@@ -85,6 +86,7 @@
 - (void)viewDidLoad
 {
     [super viewDidLoad];
+    [self fitIOS6_7];
     self.title = @"MainMenu";
     if (_menuItemNames==nil) {
         _menuItemNames = @[
@@ -97,8 +99,8 @@
 //    NSDate *date = [NSDate dateWithISO8601String:@"2014-06-10T16:27:48.09"];
 //    NSLog(@"~~~~~~~~~~~:  %@",[date iso8601Format]);
 //    NSLog(@"~~~~~~~~~~~:  %@",[[[NSDate date] todayEndTime]iso8601Format]);
-//    NaviCoverView *ncv = [[NaviCoverView alloc]initWithFrame:self.navigationController.view.bounds position:CGPointMake(0, 230) radius:100];
-//    [self.navigationController.view addSubview:ncv];
+    NaviCoverView *ncv = [[NaviCoverView alloc]initWithFrame:self.view.bounds];
+    [self.view addSubview:ncv];
 }
 
 - (void)didReceiveMemoryWarning

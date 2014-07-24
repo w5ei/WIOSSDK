@@ -10,5 +10,4 @@
 
 @interface NaviCoverView : UIView
 //-----
-- (id)initWithFrame:(CGRect)frame position:(CGPoint)pos radius:(size_t)radius;
 @end

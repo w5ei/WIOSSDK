@@ -8,9 +8,27 @@
 
 #import "CommonEx.h"
 #import <CommonCrypto/CommonDigest.h>
-
+NSString *const kLastVersionString = @"kLastVersionString";
 @implementation CommonEx
-
++(BOOL)isNewVersion{
+    NSUserDefaults *ud = [NSUserDefaults standardUserDefaults];
+    BOOL isNewVersion = YES;
+    NSString *value = [ud stringForKey:kLastVersionString];
+    NSString *currentVersionString = [[[NSBundle mainBundle] infoDictionary] objectForKey:(__bridge NSString*)kCFBundleVersionKey];
+    if (value==nil) {
+        [ud setObject:currentVersionString forKey:kLastVersionString];
+        [ud synchronize];
+    }else{
+        if ([currentVersionString isEqual:value]) {
+            isNewVersion = NO;
+        }else{
+            isNewVersion = YES;
+            [ud setObject:currentVersionString forKey:kLastVersionString];
+            [ud synchronize];
+        }
+    }
+    return isNewVersion;
+}
 @end
 #pragma mark- NSArray
 @implementation NSArray(NSReallyContainArray)
@@ -114,5 +132,12 @@
 @implementation UIColor (GRB255)
 +(UIColor *)color255WithRed:(unsigned char)red green:(unsigned char)green blue:(unsigned char)blue alpha:(unsigned char)alpha{
     return [UIColor colorWithRed:red/255.0f green:green/255.0f  blue:blue/255.0f  alpha:alpha/255.0f ];
+}
+@end
+@implementation UIViewController(fitIOS6_7)
+-(void)fitIOS6_7{
+    if([[[UIDevice currentDevice] systemVersion] floatValue] >= 7.0){
+        self.edgesForExtendedLayout = UIRectEdgeNone;
+    }
 }
 @end

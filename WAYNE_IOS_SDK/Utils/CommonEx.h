@@ -36,3 +36,7 @@
 @interface UIColor (GRB255)
 +(UIColor *)color255WithRed:(unsigned char)red green:(unsigned char)green blue:(unsigned char)blue alpha:(unsigned char)alpha;
 @end
+
+@interface UIViewController (fitIOS6_7)
+-(void)fitIOS6_7;
+@end
