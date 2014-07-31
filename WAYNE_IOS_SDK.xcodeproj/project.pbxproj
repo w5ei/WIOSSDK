@@ -91,6 +91,7 @@
 		AFB826951981281E00EEF055 /* GameLevel.m in Sources */ = {isa = PBXBuildFile; fileRef = AFB8268A1981281E00EEF055 /* GameLevel.m */; };
 		AFB826961981281E00EEF055 /* GameManager.m in Sources */ = {isa = PBXBuildFile; fileRef = AFB8268C1981281E00EEF055 /* GameManager.m */; };
 		AFB826971981281E00EEF055 /* ViewCommonComputer.m in Sources */ = {isa = PBXBuildFile; fileRef = AFB8268F1981281E00EEF055 /* ViewCommonComputer.m */; };
+		AFB832B61989F51F007A71DC /* LoadMoreControl.m in Sources */ = {isa = PBXBuildFile; fileRef = AFB832B51989F51F007A71DC /* LoadMoreControl.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -156,8 +157,8 @@
 		7DE5E7A218042383001BB491 /* MessageUI.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MessageUI.framework; path = System/Library/Frameworks/MessageUI.framework; sourceTree = SDKROOT; };
 		AFB8251E1981028900EEF055 /* RandomUtil.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RandomUtil.h; sourceTree = "<group>"; };
 		AFB8251F1981028900EEF055 /* RandomUtil.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RandomUtil.m; sourceTree = "<group>"; };
-		AFB825211981031100EEF055 /* CommonEx.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CommonEx.h; sourceTree = "<group>"; };
-		AFB825221981031100EEF055 /* CommonEx.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CommonEx.m; sourceTree = "<group>"; };
+		AFB825211981031100EEF055 /* CommonEx.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = CommonEx.h; path = ../CommonEx.h; sourceTree = "<group>"; };
+		AFB825221981031100EEF055 /* CommonEx.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = CommonEx.m; path = ../CommonEx.m; sourceTree = "<group>"; };
 		AFB825231981031100EEF055 /* TimeUtil.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TimeUtil.h; sourceTree = "<group>"; };
 		AFB825241981031100EEF055 /* TimeUtil.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TimeUtil.m; sourceTree = "<group>"; };
 		AFB82542198104C800EEF055 /* button.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = button.jpg; sourceTree = "<group>"; };
@@ -234,6 +235,8 @@
 		AFB8268C1981281E00EEF055 /* GameManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GameManager.m; sourceTree = "<group>"; };
 		AFB8268E1981281E00EEF055 /* ViewCommonComputer.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ViewCommonComputer.h; sourceTree = "<group>"; };
 		AFB8268F1981281E00EEF055 /* ViewCommonComputer.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ViewCommonComputer.m; sourceTree = "<group>"; };
+		AFB832B41989F51F007A71DC /* LoadMoreControl.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LoadMoreControl.h; sourceTree = "<group>"; };
+		AFB832B51989F51F007A71DC /* LoadMoreControl.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LoadMoreControl.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -456,8 +459,6 @@
 				AFB8256E19810CEA00EEF055 /* 文字处理 */,
 				AFB8255B198104E300EEF055 /* ShareManager.h */,
 				AFB8255C198104E300EEF055 /* ShareManager.m */,
-				AFB825211981031100EEF055 /* CommonEx.h */,
-				AFB825221981031100EEF055 /* CommonEx.m */,
 				AFB825231981031100EEF055 /* TimeUtil.h */,
 				AFB825241981031100EEF055 /* TimeUtil.m */,
 				AFB8251E1981028900EEF055 /* RandomUtil.h */,
@@ -475,6 +476,8 @@
 		AFB82541198104C800EEF055 /* Views */ = {
 			isa = PBXGroup;
 			children = (
+				AFB832B41989F51F007A71DC /* LoadMoreControl.h */,
+				AFB832B51989F51F007A71DC /* LoadMoreControl.m */,
 				AFB82542198104C800EEF055 /* button.jpg */,
 				AFB82543198104C800EEF055 /* CoverProgressView.h */,
 				AFB82544198104C800EEF055 /* CoverProgressView.m */,
@@ -503,6 +506,8 @@
 		AFB8256E19810CEA00EEF055 /* 文字处理 */ = {
 			isa = PBXGroup;
 			children = (
+				AFB825211981031100EEF055 /* CommonEx.h */,
+				AFB825221981031100EEF055 /* CommonEx.m */,
 				AFB8256F19810CEA00EEF055 /* citydict.plist */,
 				AFB8257019810CEA00EEF055 /* CityPickerViewController.h */,
 				AFB8257119810CEA00EEF055 /* CityPickerViewController.m */,
@@ -721,6 +726,7 @@
 				7D48400F17C5BD44009AC184 /* main.m in Sources */,
 				7DA1F9FF1805710E007459B1 /* MenuViewController.m in Sources */,
 				AFB826951981281E00EEF055 /* GameLevel.m in Sources */,
+				AFB832B61989F51F007A71DC /* LoadMoreControl.m in Sources */,
 				AFB8267D1981248600EEF055 /* NotificationViewController.m in Sources */,
 				7D48401317C5BD45009AC184 /* AppDelegate.m in Sources */,
 				AFB8257E19810CEA00EEF055 /* DateEx.m in Sources */,

@@ -44,7 +44,28 @@
     }];
     [self addSubview:_tagIV];
 }
-
+-(void)setCenterForHandImageView:(CGPoint)pos upsideDown:(BOOL)upsideDown{
+    if (_tagIV) {
+        [_tagIV.layer removeAllAnimations];
+        [_tagIV removeFromSuperview];
+        _tagIV = nil;
+    }
+    if (_tagIV==nil) {
+        _tagIV = [[UIImageView alloc]initWithImage:[UIImage imageNamed:@"detalle"]];
+        _tagIV.contentMode = UIViewContentModeCenter;
+        [self addSubview:_tagIV];
+        if (upsideDown) {
+            _tagIV.transform = CGAffineTransformRotate(_tagIV.transform, M_PI);
+        }
+        CGAffineTransform transform = CGAffineTransformScale(_tagIV.transform, 0.95, 0.95);
+        [UIView animateWithDuration:0.65 delay:0.15 options:UIViewAnimationOptionRepeat|UIViewAnimationOptionAutoreverse animations:^{
+            
+            _tagIV.transform = CGAffineTransformMake(transform.a,transform.b,transform.c,transform.d, transform.tx, transform.ty+(upsideDown?5:-5));
+            
+        } completion:^(BOOL finished) {}];
+    }
+    _tagIV.center = pos;
+}
 //clear a rect ,allways for clear all the view
 // if for clear like rubber use: CGContextSetBlendMode(ctx,kCGBlendModeClear);before drawing
 +(void)clearRect:(CGRect)rect context:(CGContextRef)ctx{
