@@ -7,7 +7,7 @@
 //
 
 #import <UIKit/UIKit.h>
-
-@interface MenuViewController : UIViewController<UITableViewDataSource,UITableViewDelegate>
-
+@interface MenuViewController : UIViewController<UITableViewDataSource,UITableViewDelegate>{
+    __weak IBOutlet UITableView *_tableView;
+}
 @end

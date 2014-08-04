@@ -9,7 +9,8 @@
 #import <Foundation/Foundation.h>
 
 @interface CommonEx : NSObject
-
++(int)indexFromCurrentIndex:(int)currentIndex stepValue:(int)stepValue maxIndexValue:(int)maxIndexValue;
++(BOOL)isNewVersion;
 @end
 
 #pragma mark- NSArray

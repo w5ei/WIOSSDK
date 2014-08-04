@@ -10,6 +10,7 @@
 #import "FacebookViewController.h"
 #import "LifeManagerViewController.h"
 #import "NotificationViewController.h"
+#import "FruitSlotsViewController.h"
 #import "NumberView.h"
 #import "StringEx.h"
 #import "DateEx.h"
@@ -17,6 +18,7 @@
 #import "CommonEx.h"
 @interface MenuViewController (){
     NSArray* _menuItemNames;
+    double _delayDur ;
 }
 @end
 
@@ -30,6 +32,54 @@
     [NSString convertHanzi:hanzi toPinyin:&py andPinyinInitials:&pyi];
     NSLog(@"%@  %@",py, pyi);
 }
+
+#pragma mark- Life Cycle
+- (id)initWithNibName:(NSString *)nibNameOrNil bundle:(NSBundle *)nibBundleOrNil
+{
+    self = [super initWithNibName:nibNameOrNil bundle:nibBundleOrNil];
+    if (self) {
+    }
+    return self;
+}
+
+- (void)viewDidLoad
+{
+    [super viewDidLoad];
+    [self fitIOS6_7];
+    self.title = @"MainMenu";
+    if (_menuItemNames==nil) {
+        _menuItemNames = @[
+                           @"FacebookSDK"
+                           ,@"LifeManager"
+                           ,@"Notification"
+                           ,@"FruitSlots"
+                           ];
+    }
+//    [self test];
+//    NSDate *date = [NSDate dateWithISO8601String:@"2014-06-10T16:27:48.09"];
+//    NSLog(@"~~~~~~~~~~~:  %@",[date iso8601Format]);
+//    NSLog(@"~~~~~~~~~~~:  %@",[[[NSDate date] todayEndTime]iso8601Format]);
+//    NaviCoverView *ncv = [[NaviCoverView alloc]initWithFrame:self.view.bounds];
+//    [self.view addSubview:ncv];
+    
+//    _delayDur = 5;
+//    [self dosth];
+}
+-(void)dosth{
+    [UIView animateWithDuration:1.0 delay:_delayDur options:0 animations:^{
+        _tableView.alpha = 0.1;
+    } completion:^(BOOL finished) {
+        _tableView.alpha = 1;
+        _delayDur -= 0.5;
+        if(_delayDur>0.5)[self dosth];
+    }];
+}
+- (void)didReceiveMemoryWarning
+{
+    [super didReceiveMemoryWarning];
+}
+
+
 
 #pragma mark- TableView DataSource
 -(NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section{
@@ -58,54 +108,24 @@
     [tableView deselectRowAtIndexPath:indexPath animated:YES];
     switch (indexPath.row) {
         case 0:{
-//            FacebookViewController* vc = [[FacebookViewController alloc]init];
-//            [self.navigationController pushViewController:vc animated:YES];
+            //            FacebookViewController* vc = [[FacebookViewController alloc]init];
+            //            [self.navigationController pushViewController:vc animated:YES];
         }break;
         case 1:{
-            LifeManagerViewController* vc = [[LifeManagerViewController alloc]init];
+            LifeManagerViewController *vc = [[LifeManagerViewController alloc]init];
             [self.navigationController pushViewController:vc animated:YES];
         }break;
         case 2:{
-            NotificationViewController* vc = [[NotificationViewController alloc]init];
+            NotificationViewController *vc = [[NotificationViewController alloc]init];
             [self.navigationController pushViewController:vc animated:YES];
         }break;
+        case 3:{
+            FruitSlotsViewController *vc = [[FruitSlotsViewController alloc]init];
+            [self.navigationController pushViewController:vc animated:YES];
+        }
         default:
             break;
     }
-}
-
-#pragma mark- Life Cycle
-- (id)initWithNibName:(NSString *)nibNameOrNil bundle:(NSBundle *)nibBundleOrNil
-{
-    self = [super initWithNibName:nibNameOrNil bundle:nibBundleOrNil];
-    if (self) {
-    }
-    return self;
-}
-
-- (void)viewDidLoad
-{
-    [super viewDidLoad];
-    [self fitIOS6_7];
-    self.title = @"MainMenu";
-    if (_menuItemNames==nil) {
-        _menuItemNames = @[
-                           @"FacebookSDK"
-                           ,@"LifeManager"
-                           ,@"Notification"
-                           ];
-    }
-//    [self test];
-//    NSDate *date = [NSDate dateWithISO8601String:@"2014-06-10T16:27:48.09"];
-//    NSLog(@"~~~~~~~~~~~:  %@",[date iso8601Format]);
-//    NSLog(@"~~~~~~~~~~~:  %@",[[[NSDate date] todayEndTime]iso8601Format]);
-    NaviCoverView *ncv = [[NaviCoverView alloc]initWithFrame:self.view.bounds];
-    [self.view addSubview:ncv];
-}
-
-- (void)didReceiveMemoryWarning
-{
-    [super didReceiveMemoryWarning];
 }
 
 @end

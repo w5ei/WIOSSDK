@@ -10,6 +10,15 @@
 #import <CommonCrypto/CommonDigest.h>
 NSString *const kLastVersionString = @"kLastVersionString";
 @implementation CommonEx
++(int)indexFromCurrentIndex:(int)currentIndex stepValue:(int)stepValue maxIndexValue:(int)maxIndexValue{
+    int nextIndex = currentIndex+stepValue;
+    if (nextIndex > maxIndexValue) {
+        nextIndex = nextIndex - (maxIndexValue+1);
+    }else if(nextIndex < 0){
+        nextIndex = (maxIndexValue+1) - abs(nextIndex);
+    }
+    return nextIndex;
+}
 +(BOOL)isNewVersion{
     NSUserDefaults *ud = [NSUserDefaults standardUserDefaults];
     BOOL isNewVersion = YES;
