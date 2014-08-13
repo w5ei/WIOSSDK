@@ -45,6 +45,8 @@
 		7DB87EEA17DF0600000EEBA2 /* AudioToolbox.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7DB87EE917DF0600000EEBA2 /* AudioToolbox.framework */; };
 		7DE5E7651803FCA2001BB491 /* Icon.png in Resources */ = {isa = PBXBuildFile; fileRef = 7DE5E7641803FCA2001BB491 /* Icon.png */; };
 		7DE5E7A318042383001BB491 /* MessageUI.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7DE5E7A218042383001BB491 /* MessageUI.framework */; };
+		AFB2ACA7199075230067AA74 /* CoreAudio.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = AFB2ACA6199075230067AA74 /* CoreAudio.framework */; };
+		AFB2ACAB199076E90067AA74 /* AudioPlayer.m in Sources */ = {isa = PBXBuildFile; fileRef = AFB2ACAA199076E90067AA74 /* AudioPlayer.m */; };
 		AFB825201981028900EEF055 /* RandomUtil.m in Sources */ = {isa = PBXBuildFile; fileRef = AFB8251F1981028900EEF055 /* RandomUtil.m */; };
 		AFB825251981031100EEF055 /* CommonEx.m in Sources */ = {isa = PBXBuildFile; fileRef = AFB825221981031100EEF055 /* CommonEx.m */; };
 		AFB825261981031100EEF055 /* TimeUtil.m in Sources */ = {isa = PBXBuildFile; fileRef = AFB825241981031100EEF055 /* TimeUtil.m */; };
@@ -158,6 +160,9 @@
 		7DB87EE917DF0600000EEBA2 /* AudioToolbox.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AudioToolbox.framework; path = System/Library/Frameworks/AudioToolbox.framework; sourceTree = SDKROOT; };
 		7DE5E7641803FCA2001BB491 /* Icon.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Icon.png; sourceTree = "<group>"; };
 		7DE5E7A218042383001BB491 /* MessageUI.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MessageUI.framework; path = System/Library/Frameworks/MessageUI.framework; sourceTree = SDKROOT; };
+		AFB2ACA6199075230067AA74 /* CoreAudio.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreAudio.framework; path = System/Library/Frameworks/CoreAudio.framework; sourceTree = SDKROOT; };
+		AFB2ACA9199076E90067AA74 /* AudioPlayer.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AudioPlayer.h; sourceTree = "<group>"; };
+		AFB2ACAA199076E90067AA74 /* AudioPlayer.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AudioPlayer.m; sourceTree = "<group>"; };
 		AFB8251E1981028900EEF055 /* RandomUtil.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RandomUtil.h; sourceTree = "<group>"; };
 		AFB8251F1981028900EEF055 /* RandomUtil.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RandomUtil.m; sourceTree = "<group>"; };
 		AFB825211981031100EEF055 /* CommonEx.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CommonEx.h; sourceTree = "<group>"; };
@@ -252,6 +257,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				AFB2ACA7199075230067AA74 /* CoreAudio.framework in Frameworks */,
 				7D9A96FB18123D0300E75B0D /* Social.framework in Frameworks */,
 				7DE5E7A318042383001BB491 /* MessageUI.framework in Frameworks */,
 				7D9A96F018122F9600E75B0D /* FacebookSDK.framework in Frameworks */,
@@ -299,6 +305,7 @@
 		7D48400117C5BD44009AC184 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				AFB2ACA6199075230067AA74 /* CoreAudio.framework */,
 				7D9A96FA18123D0300E75B0D /* Social.framework */,
 				7D9A96EF18122F9600E75B0D /* FacebookSDK.framework */,
 				7DE5E7A218042383001BB491 /* MessageUI.framework */,
@@ -460,6 +467,15 @@
 			path = ..;
 			sourceTree = "<group>";
 		};
+		AFB2ACA8199076C70067AA74 /* Media */ = {
+			isa = PBXGroup;
+			children = (
+				AFB2ACA9199076E90067AA74 /* AudioPlayer.h */,
+				AFB2ACAA199076E90067AA74 /* AudioPlayer.m */,
+			);
+			path = Media;
+			sourceTree = "<group>";
+		};
 		AFB8251D1981021300EEF055 /* Utils */ = {
 			isa = PBXGroup;
 			children = (
@@ -540,6 +556,7 @@
 		AFB826581981248600EEF055 /* API */ = {
 			isa = PBXGroup;
 			children = (
+				AFB2ACA8199076C70067AA74 /* Media */,
 				AFBD287D198F2F6700EEDD5B /* Animation */,
 				AFB8267F1981281E00EEF055 /* CoreGraphics */,
 				AFB826821981281E00EEF055 /* Game */,
@@ -760,6 +777,7 @@
 				AFB825201981028900EEF055 /* RandomUtil.m in Sources */,
 				AFB825251981031100EEF055 /* CommonEx.m in Sources */,
 				AFBD2880198F2F6700EEDD5B /* AnimationUtil.m in Sources */,
+				AFB2ACAB199076E90067AA74 /* AudioPlayer.m in Sources */,
 				AFB8255A198104C800EEF055 /* WStepper.m in Sources */,
 				AFB82651198123AF00EEF055 /* LifeManager.m in Sources */,
 				AFB826901981281E00EEF055 /* NaviCoverView.m in Sources */,

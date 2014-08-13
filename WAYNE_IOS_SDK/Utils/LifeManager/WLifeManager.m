@@ -70,7 +70,7 @@
         _totalLeftTimeSeconds = 0;
         [WLifeManager persistLifeCount:lifeCount];
     }else{
-        _totalLeftTimeSeconds = (maxLifeCount-lifeCount)*lifePlusTimeInterval+lifePlueLeftTimeSeconds;
+        _totalLeftTimeSeconds = (maxLifeCount-lifeCount-1)*lifePlusTimeInterval+lifePlueLeftTimeSeconds;
     }
     //保存前面计算得到的总剩余时间
     [WLifeManager persistFinishDateWithTimeIntervalSinceNow:_totalLeftTimeSeconds];
