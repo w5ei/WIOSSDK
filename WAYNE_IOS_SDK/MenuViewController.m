@@ -46,6 +46,8 @@
 {
     [super viewDidLoad];
     [self fitIOS6_7];
+    NSLog(@"uuid:%@",
+          [NSUUID UUID].UUIDString);
     self.title = @"MainMenu";
     if (_menuItemNames==nil) {
         _menuItemNames = @[

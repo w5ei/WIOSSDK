@@ -47,6 +47,7 @@
 		7DE5E7A318042383001BB491 /* MessageUI.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7DE5E7A218042383001BB491 /* MessageUI.framework */; };
 		AFB2ACA7199075230067AA74 /* CoreAudio.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = AFB2ACA6199075230067AA74 /* CoreAudio.framework */; };
 		AFB2ACAB199076E90067AA74 /* AudioPlayer.m in Sources */ = {isa = PBXBuildFile; fileRef = AFB2ACAA199076E90067AA74 /* AudioPlayer.m */; };
+		AFB2F61C19A742830083E1ED /* TabManager.m in Sources */ = {isa = PBXBuildFile; fileRef = AFB2F61B19A742830083E1ED /* TabManager.m */; };
 		AFB825201981028900EEF055 /* RandomUtil.m in Sources */ = {isa = PBXBuildFile; fileRef = AFB8251F1981028900EEF055 /* RandomUtil.m */; };
 		AFB825251981031100EEF055 /* CommonEx.m in Sources */ = {isa = PBXBuildFile; fileRef = AFB825221981031100EEF055 /* CommonEx.m */; };
 		AFB825261981031100EEF055 /* TimeUtil.m in Sources */ = {isa = PBXBuildFile; fileRef = AFB825241981031100EEF055 /* TimeUtil.m */; };
@@ -163,6 +164,8 @@
 		AFB2ACA6199075230067AA74 /* CoreAudio.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreAudio.framework; path = System/Library/Frameworks/CoreAudio.framework; sourceTree = SDKROOT; };
 		AFB2ACA9199076E90067AA74 /* AudioPlayer.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AudioPlayer.h; sourceTree = "<group>"; };
 		AFB2ACAA199076E90067AA74 /* AudioPlayer.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AudioPlayer.m; sourceTree = "<group>"; };
+		AFB2F61A19A742830083E1ED /* TabManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TabManager.h; sourceTree = "<group>"; };
+		AFB2F61B19A742830083E1ED /* TabManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TabManager.m; sourceTree = "<group>"; };
 		AFB8251E1981028900EEF055 /* RandomUtil.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RandomUtil.h; sourceTree = "<group>"; };
 		AFB8251F1981028900EEF055 /* RandomUtil.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RandomUtil.m; sourceTree = "<group>"; };
 		AFB825211981031100EEF055 /* CommonEx.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CommonEx.h; sourceTree = "<group>"; };
@@ -479,6 +482,8 @@
 		AFB8251D1981021300EEF055 /* Utils */ = {
 			isa = PBXGroup;
 			children = (
+				AFB2F61A19A742830083E1ED /* TabManager.h */,
+				AFB2F61B19A742830083E1ED /* TabManager.m */,
 				AFB825211981031100EEF055 /* CommonEx.h */,
 				AFB825221981031100EEF055 /* CommonEx.m */,
 				7DB87EEB17DF0656000EEBA2 /* Image */,
@@ -774,6 +779,7 @@
 				AFBD2883198F301000EEDD5B /* FruitSlotsView.m in Sources */,
 				AFB8258319810CEA00EEF055 /* StringEx.m in Sources */,
 				AFB825661981064F00EEF055 /* UIButtonEx.m in Sources */,
+				AFB2F61C19A742830083E1ED /* TabManager.m in Sources */,
 				AFB825201981028900EEF055 /* RandomUtil.m in Sources */,
 				AFB825251981031100EEF055 /* CommonEx.m in Sources */,
 				AFBD2880198F2F6700EEDD5B /* AnimationUtil.m in Sources */,
