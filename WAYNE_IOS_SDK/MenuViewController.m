@@ -16,6 +16,7 @@
 #import "DateEx.h"
 #import "NaviCoverView.h"
 #import "CommonEx.h"
+#import "GridViewController.h"
 @interface MenuViewController (){
     NSArray* _menuItemNames;
     double _delayDur ;
@@ -55,6 +56,7 @@
                            ,@"LifeManager"
                            ,@"Notification"
                            ,@"FruitSlots"
+                           ,@"CollectionView"
                            ];
     }
 //    [self test];
@@ -124,6 +126,10 @@
         case 3:{
             FruitSlotsViewController *vc = [[FruitSlotsViewController alloc]init];
             [self.navigationController pushViewController:vc animated:YES];
+        }
+        case 4:{
+             GridViewController *c= [[UIStoryboard storyboardWithName:@"main" bundle:nil] instantiateViewControllerWithIdentifier:@"GridViewController" ];
+            [self.navigationController pushViewController:c animated:YES];
         }
         default:
             break;

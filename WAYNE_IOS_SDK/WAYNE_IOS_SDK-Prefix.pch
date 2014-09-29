@@ -11,6 +11,7 @@
 #ifdef __OBJC__
     #import <UIKit/UIKit.h>
     #import <Foundation/Foundation.h>
+    #import "NSDate+Helpers.h"
 #endif
 #define UmengAppKey @"5254d71b56240bae3b40d91c"
 #define AppId_Weixin @"wx38a0c9693a832002"
