@@ -85,6 +85,8 @@
             case SKPaymentTransactionStatePurchasing:
                 [self inAppPurchaseStarted:self];
                 break;
+            case SKPaymentTransactionStateDeferred:
+                break;
         }
         if (transaction.transactionState!=SKPaymentTransactionStatePurchasing) {
             [self finishTransaction: transaction];

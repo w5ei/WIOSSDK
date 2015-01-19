@@ -11,6 +11,8 @@
 @interface LifeManagerViewController (){
     LifeManager* _lm;
     WLifeManager* _wlm;
+    UIPanGestureRecognizer *_panGestureRecognizer;
+    
 }
 
 @end
@@ -79,8 +81,13 @@
     stepper.minusButton.backgroundColor = [UIColor greenColor];
     stepper.plusButton.backgroundColor = [UIColor blueColor];
     [self.view addSubview:stepper];
+    
+    _panGestureRecognizer = [[UIPanGestureRecognizer alloc]initWithTarget:self action:@selector(pan:)];
+    _panGestureRecognizer.delegate = self;
 }
-
+-(void)pan:(UIPanGestureRecognizer* )gr{
+    
+}
 - (void)didReceiveMemoryWarning
 {
     [super didReceiveMemoryWarning];

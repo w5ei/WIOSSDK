@@ -9,7 +9,7 @@
 #import <UIKit/UIKit.h>
 #import "LifeManager.h"
 #import "WLifeManager.h"
-@interface LifeManagerViewController : UIViewController<LifeManagerDelegate,WLifeManagerDelegate>{
+@interface LifeManagerViewController : UIViewController<LifeManagerDelegate,WLifeManagerDelegate,UIGestureRecognizerDelegate>{
     __weak IBOutlet UILabel *_label;
     __weak IBOutlet UILabel *_label2;
     __weak IBOutlet UILabel *_label3;

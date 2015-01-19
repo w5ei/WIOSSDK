@@ -69,6 +69,7 @@
 //    _delayDur = 5;
 //    [self dosth];
 }
+
 -(void)dosth{
     [UIView animateWithDuration:1.0 delay:_delayDur options:0 animations:^{
         _tableView.alpha = 0.1;

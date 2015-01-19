@@ -14,7 +14,7 @@
 		<string>https://github.com/waynegreen/WAYNE_IOS_SDK.git</string>
 	</dict>
 	<key>IDESourceControlProjectPath</key>
-	<string>WAYNE_IOS_SDK.xcodeproj/project.xcworkspace</string>
+	<string>WAYNE_IOS_SDK.xcodeproj</string>
 	<key>IDESourceControlProjectRelativeInstallPathDictionary</key>
 	<dict>
 		<key>EB5A0DEE11F14DCBBCF9EA4A10E460869C673A10</key>
