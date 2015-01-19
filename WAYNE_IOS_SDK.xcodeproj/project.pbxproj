@@ -800,6 +800,11 @@
 			attributes = {
 				LastUpgradeCheck = 0460;
 				ORGANIZATIONNAME = "green wayne";
+				TargetAttributes = {
+					7D483FFE17C5BD44009AC184 = {
+						DevelopmentTeam = RLQBW7962T;
+					};
+				};
 			};
 			buildConfigurationList = 7D483FFA17C5BD44009AC184 /* Build configuration list for PBXProject "WAYNE_IOS_SDK" */;
 			compatibilityVersion = "Xcode 3.2";
@@ -1014,7 +1019,7 @@
 					armv7,
 					armv7s,
 				);
-				CODE_SIGN_IDENTITY = "";
+				CODE_SIGN_IDENTITY = "iPhone Developer";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
@@ -1046,7 +1051,7 @@
 					armv7,
 					armv7s,
 				);
-				CODE_SIGN_IDENTITY = "";
+				CODE_SIGN_IDENTITY = "iPhone Developer";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
