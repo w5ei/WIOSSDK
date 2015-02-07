@@ -115,6 +115,9 @@
 }
 
 -(void)transactionCompletedWithReceipt:(NSData*)receipt{
+    //ios 7.0以上用下面的方式取得收据
+//    NSURL *receiptURL = [[NSBundle mainBundle] appStoreReceiptURL];
+//    NSData *receipt = [NSData dataWithContentsOfURL:receiptURL];
     [super transactionCompletedWithReceipt:receipt];
     //交易成功,如果不是本地内购买还应该验证收据才能确定成功
     [self inAppPurchaseSuccess:self];

@@ -8,6 +8,7 @@
 
 #import "MenuViewController.h"
 #import "FacebookViewController.h"
+#import "InAppPurchaseViewController.h"
 #import "LifeManagerViewController.h"
 #import "NotificationViewController.h"
 #import "FruitSlotsViewController.h"
@@ -52,7 +53,7 @@
     self.title = @"MainMenu";
     if (_menuItemNames==nil) {
         _menuItemNames = @[
-                           @"FacebookSDK"
+                           @"IAP"
                            ,@"LifeManager"
                            ,@"Notification"
                            ,@"FruitSlots"
@@ -113,8 +114,8 @@
     [tableView deselectRowAtIndexPath:indexPath animated:YES];
     switch (indexPath.row) {
         case 0:{
-            //            FacebookViewController* vc = [[FacebookViewController alloc]init];
-            //            [self.navigationController pushViewController:vc animated:YES];
+                        InAppPurchaseViewController* vc = [[InAppPurchaseViewController alloc]init];
+                        [self.navigationController pushViewController:vc animated:YES];
         }break;
         case 1:{
             LifeManagerViewController *vc = [[LifeManagerViewController alloc]init];
