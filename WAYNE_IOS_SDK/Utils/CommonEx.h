@@ -41,3 +41,6 @@
 @interface UIViewController (fitIOS6_7)
 -(void)fitIOS6_7;
 @end
+@interface NSObject (WEX)
+-(NSString*)simpleClassName;
+@end

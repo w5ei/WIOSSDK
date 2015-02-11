@@ -150,3 +150,10 @@ NSString *const kLastVersionString = @"kLastVersionString";
     }
 }
 @end
+@implementation NSObject(WEX)
+
+-(NSString *)simpleClassName{
+    return NSStringFromClass([self class]);
+}
+
+@end

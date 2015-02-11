@@ -7,7 +7,9 @@
 //
 
 #import "InAppPurchaser.h"
-
+/**
+ *
+ */
 @interface InAppPurchaserApple : InAppPurchaser<SKPaymentTransactionObserver,SKProductsRequestDelegate>
 - (void) requestProductsWithIds:(NSSet *)productIds;
 @end

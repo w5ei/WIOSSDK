@@ -43,7 +43,13 @@
 +(NSString*)localeCurrencySymbol;
 @end
 /////
-
+@protocol InAppPurchaseValidateProtocol <NSObject>
+-(void)validate;
+@end
+@protocol InAppPurchaseValidateDelegate <NSObject>
+-(void)inAppPurchaseValidateSuccess;
+-(void)inAppPurchaseValidateFail;
+@end
 /////
 @interface Product : NSObject
 @property(nonatomic, strong) NSString* remoteId;

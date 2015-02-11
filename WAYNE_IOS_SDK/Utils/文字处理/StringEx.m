@@ -40,6 +40,21 @@
     }
     return result;
 }
++(NSString *)hmacmd5:(NSString *)data secret:(NSString *)key {
+    
+    const char *cKey  = [key cStringUsingEncoding:NSASCIIStringEncoding];
+    const char *cData = [data cStringUsingEncoding:NSASCIIStringEncoding];
+    
+    unsigned char cHMAC[CC_MD5_DIGEST_LENGTH];
+    
+    CCHmac(kCCHmacAlgMD5, cKey, strlen(cKey), cData, strlen(cData), cHMAC);
+    
+    NSData *HMAC = [[NSData alloc] initWithBytes:cHMAC length:sizeof(cHMAC)];
+    
+    NSString *hash = [HMAC base64Encoding];
+    
+    return hash;
+}
 +(NSString *)hmacsha1:(NSString *)data secret:(NSString *)key {
     
     const char *cKey  = [key cStringUsingEncoding:NSASCIIStringEncoding];
@@ -136,4 +151,20 @@
     result = [result stringByReplacingPercentEscapesUsingEncoding:NSUTF8StringEncoding];
     return result;
 }
+- (NSString*) urlEncodedString {
+    
+    CFStringRef encodedCFString = CFURLCreateStringByAddingPercentEscapes(kCFAllocatorDefault,
+                                                                          (__bridge CFStringRef) self,
+                                                                          nil,
+                                                                          CFSTR("?!@#$^&%*+,:;='\"`<>()[]{}/\\| "),
+                                                                          kCFStringEncodingUTF8);
+    
+    NSString *encodedString = [[NSString alloc] initWithString:(__bridge_transfer NSString*) encodedCFString];
+    
+    if(!encodedString)
+        encodedString = @"";
+    
+    return encodedString;
+}
+
 @end

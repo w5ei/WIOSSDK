@@ -134,6 +134,7 @@
 		AFD0621719D8F30E00F6F768 /* MPAnimation.m in Sources */ = {isa = PBXBuildFile; fileRef = AFD0621219D8F30E00F6F768 /* MPAnimation.m */; };
 		AFD0621A19D8F4C000F6F768 /* WGridLayout.m in Sources */ = {isa = PBXBuildFile; fileRef = AFD0621919D8F4C000F6F768 /* WGridLayout.m */; };
 		AFD0621C19D909B200F6F768 /* Default.xib in Resources */ = {isa = PBXBuildFile; fileRef = AFD0621B19D909B200F6F768 /* Default.xib */; };
+		AFD6EC861A885E1E00BC5C87 /* NSData+Base64.m in Sources */ = {isa = PBXBuildFile; fileRef = AFD6EC851A885E1E00BC5C87 /* NSData+Base64.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -359,6 +360,8 @@
 		AFD0621819D8F4C000F6F768 /* WGridLayout.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WGridLayout.h; sourceTree = "<group>"; };
 		AFD0621919D8F4C000F6F768 /* WGridLayout.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WGridLayout.m; sourceTree = "<group>"; };
 		AFD0621B19D909B200F6F768 /* Default.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = Default.xib; sourceTree = "<group>"; };
+		AFD6EC841A885E1E00BC5C87 /* NSData+Base64.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSData+Base64.h"; sourceTree = "<group>"; };
+		AFD6EC851A885E1E00BC5C87 /* NSData+Base64.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSData+Base64.m"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -705,6 +708,8 @@
 		AFB8251D1981021300EEF055 /* Utils */ = {
 			isa = PBXGroup;
 			children = (
+				AFD6EC841A885E1E00BC5C87 /* NSData+Base64.h */,
+				AFD6EC851A885E1E00BC5C87 /* NSData+Base64.m */,
 				AFB2F61A19A742830083E1ED /* TabManager.h */,
 				AFB2F61B19A742830083E1ED /* TabManager.m */,
 				AFB825211981031100EEF055 /* CommonEx.h */,
@@ -992,6 +997,7 @@
 				AFB8257F19810CEA00EEF055 /* IndexNamesViewController.m in Sources */,
 				7D48400F17C5BD44009AC184 /* main.m in Sources */,
 				7DA1F9FF1805710E007459B1 /* MenuViewController.m in Sources */,
+				AFD6EC861A885E1E00BC5C87 /* NSData+Base64.m in Sources */,
 				AFB568C019D8220400F4E882 /* StacksLayout.m in Sources */,
 				AFBD2887198F4F9600EEDD5B /* FruitSlotsViewController.m in Sources */,
 				AFB826951981281E00EEF055 /* GameLevel.m in Sources */,
