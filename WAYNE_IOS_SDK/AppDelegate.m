@@ -9,7 +9,6 @@
 #import "AppDelegate.h"
 #import "MenuViewController.h"
 #import "MobClick.h"
-#import "UMSocial.h"
 //#import <FacebookSDK/FacebookSDK.h>
 @implementation AppDelegate
 
@@ -30,16 +29,16 @@
     [self.window makeKeyAndVisible];
     
     [MobClick startWithAppkey:UmengAppKey];
-    [UMSocialData setAppKey:UmengAppKey];
-    [UMSocialConfig setSnsPlatformNames:@[UMShareToFacebook,UMShareToTwitter,UMShareToEmail,UMShareToSms]];
-    [UMSocialConfig setWXAppId:AppId_Weixin url:nil];
-    [UMSocialData defaultData].extConfig.wxMessageType = UMSocialWXMessageTypeImage;
-    //    [UMSocialConfig setTheme:UMSocialThemeBlack];
-    [UMSocialConfig setShareGridViewTheme:^(CGContextRef ref, UIImageView *backgroundView,UILabel *label){
-        //        backgroundView.backgroundColor = [UIColor whiteColor];
-        //隐藏文字
-        label.hidden = YES;
-    }];
+//    [UMSocialData setAppKey:UmengAppKey];
+//    [UMSocialConfig setSnsPlatformNames:@[UMShareToFacebook,UMShareToTwitter,UMShareToEmail,UMShareToSms]];
+//    [UMSocialConfig setWXAppId:AppId_Weixin url:nil];
+//    [UMSocialData defaultData].extConfig.wxMessageType = UMSocialWXMessageTypeImage;
+//    //    [UMSocialConfig setTheme:UMSocialThemeBlack];
+//    [UMSocialConfig setShareGridViewTheme:^(CGContextRef ref, UIImageView *backgroundView,UILabel *label){
+//        //        backgroundView.backgroundColor = [UIColor whiteColor];
+//        //隐藏文字
+//        label.hidden = YES;
+//    }];
     
     [MobClick updateOnlineConfig];
     [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(onlineConfigCallBack:) name:UMOnlineConfigDidFinishedNotification object:nil];
@@ -66,7 +65,7 @@
 
 - (void)applicationDidBecomeActive:(UIApplication *)application
 {
-    [UMSocialSnsService  applicationDidBecomeActive];
+//    [UMSocialSnsService  applicationDidBecomeActive];
 //    [FBAppEvents activateApp];
 //    [FBAppCall handleDidBecomeActive];
 }
@@ -81,7 +80,7 @@
             openURL:(NSURL *)url
   sourceApplication:(NSString *)sourceApplication
          annotation:(id)annotation {
-    [UMSocialSnsService handleOpenURL:url wxApiDelegate:nil];
+//    [UMSocialSnsService handleOpenURL:url wxApiDelegate:nil];
 //    [FBAppCall handleOpenURL:url
 //                  sourceApplication:sourceApplication fallbackHandler:nil];
     

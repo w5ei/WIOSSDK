@@ -7,19 +7,19 @@
 //
 
 #import "ShareManager.h"
-#import "UMSocial.h"
+//#import "UMSocial.h"
 
 @implementation ShareManager
-+(void)shareToWechatTimelineWithImage:(UIImage*)image{
-    [[UMSocialDataService defaultDataService]
-     postSNSWithTypes:@[UMShareToWechatTimeline]
-     content:nil
-     image:image location:nil
-     urlResource:nil
-     presentedController:[[UIApplication sharedApplication]keyWindow].rootViewController completion:^(UMSocialResponseEntity *response){
-        if (response.responseCode == UMSResponseCodeSuccess) {
-//            NSLog(@"分享成功！");
-        }
-    }];
-}
+//+(void)shareToWechatTimelineWithImage:(UIImage*)image{
+//    [[UMSocialDataService defaultDataService]
+//     postSNSWithTypes:@[UMShareToWechatTimeline]
+//     content:nil
+//     image:image location:nil
+//     urlResource:nil
+//     presentedController:[[UIApplication sharedApplication]keyWindow].rootViewController completion:^(UMSocialResponseEntity *response){
+//        if (response.responseCode == UMSResponseCodeSuccess) {
+////            NSLog(@"分享成功！");
+//        }
+//    }];
+//}
 @end
