@@ -127,7 +127,7 @@ static NSString * const Text_TapToLoadMore = @"加载更多";
             UIScrollView *scrollView = _parentView;
             float offsetY = scrollView.contentOffset.y+scrollView.frame.size.height;
             float contentSizeH = scrollView.contentSize.height+scrollView.contentInset.bottom+scrollView.contentInset.top;
-            if (abs(offsetY-contentSizeH)<=44) {
+            if (fabsf(offsetY-contentSizeH)<=44) {
                 if(self.state!=LoadMoreControlStateNoData)[self tapAction];
             }
         }

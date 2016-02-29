@@ -7,7 +7,6 @@
 //
 
 #import "MenuViewController.h"
-#import "FacebookViewController.h"
 #import "InAppPurchaseViewController.h"
 #import "LifeManagerViewController.h"
 #import "NotificationViewController.h"

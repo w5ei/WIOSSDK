@@ -22,7 +22,7 @@
     
     CGFloat y = -(h-height)/2;
     CGFloat x = -(w-width)/2;
-    if (NULL != UIGraphicsBeginImageContextWithOptions)
+    if (NULL != &UIGraphicsBeginImageContextWithOptions)
         UIGraphicsBeginImageContextWithOptions(CGSizeMake(width, height),NO, 2);
     else
         UIGraphicsBeginImageContext(CGSizeMake(width, height));
@@ -103,7 +103,7 @@
     // On iOS 4 and later, use UIGraphicsBeginImageContextWithOptions to take the scale into consideration
     // On iOS prior to 4, fall back to use UIGraphicsBeginImageContext
     CGSize size = CGSizeMake(width, height);
-    if (NULL != UIGraphicsBeginImageContextWithOptions)
+    if (NULL != &UIGraphicsBeginImageContextWithOptions)
         UIGraphicsBeginImageContextWithOptions(size, NO, 0);
     else
         UIGraphicsBeginImageContext(size);
@@ -130,7 +130,7 @@
     CGRect rect = theView.frame;
     CGFloat scale = width/2/rect.size.width;
     
-    if (NULL != UIGraphicsBeginImageContextWithOptions)
+    if (NULL != &UIGraphicsBeginImageContextWithOptions)
         UIGraphicsBeginImageContextWithOptions(rect.size,YES, 2);
     else
         UIGraphicsBeginImageContext(rect.size);

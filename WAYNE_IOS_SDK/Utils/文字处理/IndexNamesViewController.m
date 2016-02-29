@@ -26,7 +26,7 @@
     NSBlockOperation* bo = [NSBlockOperation blockOperationWithBlock:^{
         for (NSString* nickname in friends) {
             NSString *cityPinyin,*cityInitial;
-//            [NSString convertHanzi:nickname toPinyin:&cityPinyin andPinyinInitials:&cityInitial];
+            [NSString convertHanzi:nickname toPinyin:&cityPinyin andPinyinInitials:&cityInitial];
 //            [self.citiesPinyinArray addObject:cityPinyin];
 //            [self.citiesInitialsArray addObject:cityInitial];
         }
