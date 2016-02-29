@@ -646,11 +646,6 @@
 			attributes = {
 				LastUpgradeCheck = 0720;
 				ORGANIZATIONNAME = "green wayne";
-				TargetAttributes = {
-					7D483FFE17C5BD44009AC184 = {
-						DevelopmentTeam = W557A496YQ;
-					};
-				};
 			};
 			buildConfigurationList = 7D483FFA17C5BD44009AC184 /* Build configuration list for PBXProject "WAYNE_IOS_SDK" */;
 			compatibilityVersion = "Xcode 3.2";
