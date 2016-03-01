@@ -9,5 +9,11 @@
 #import <Foundation/Foundation.h>
 
 @interface TimeUtil : NSObject
-
++ (unsigned long long)timeIntervalSince1970;
+@end
+@interface NSDate (WEX)
+- (unsigned long long)millisecondSince1970;
+- (BOOL)isToday;
+- (NSDate *)todayBeginTime;
+- (NSDate *)todayEndTime;
 @end
